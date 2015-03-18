@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ksign.service.TotalMapper">
+
+
+
+<!-- 환경조사서고객테이블 
+create table KS_CUSTOMER(
+		KS_NO NUMBER(10),
+		KS_date SYSDATE,
+		KS_CUSTOMER VARCHAR2(30),
+		KS_dept VARCHAR2(50),
+		KS_C_NAME VARCHAR2(20),
+		KS_P_NO NUMBER(13),
+		KS_TEL_NO NUMBER(13),
+		KS_PROJECT_TYPE VARCHAR2(5),
+		KS_PROJECT_NO NUMBER(10),
+		C_NO NUMBER(10)
+); -->
+<insert id="insertKs_customer" parameterType="Ks_customer">
+insert into KS_CUSTOMER(KS_NO,KS_date,KS_CUSTOMER,KS_dept,KS_C_NAME,KS_P_NO,KS_TEL_NO,KS_PROJECT_TYPE,KS_PROJECT_NO,C_NO)
+VALUES(#{KS_NO},#{KS_date},#{KS_CUSTOMER},#{KS_dept},#{KS_C_NAME},#{KS_P_NO},#{KS_TEL_NO},#{KS_PROJECT_TYPE},#{KS_PROJECT_NO},#{C_NO});
+</insert>
+
+<update id="updateKs_customer" parameterType="Ks_customer">
+update KS_CUSTOMER set
+		KS_NO=#{KS_NO},
+		KS_date=#{KS_date},
+		KS_CUSTOMER=#{KS_CUSTOMER},
+		KS_dept=#{KS_dept},
+		KS_C_NAME=#{KS_C_NAME},
+		KS_P_NO=#{KS_P_NO},
+		KS_TEL_NO=#{KS_TEL_NO},
+		KS_PROJECT_TYPE=#{KS_PROJECT_TYPE},
+		KS_PROJECT_NO=#{KS_PROJECT_NO},
+		C_NO=#{C_NO}
+</update>
+
+<!-- 사전환경조사서테이블
+create table pre_scaning_step(
+		pre_no NUMBER(10),
+		pre_customer_no NUMBER(10),
+		pre_licence_pre NUMBER(10),
+		pre_os_environment NUMBER(10),
+		pre_encryption_column NUMBER(10),
+		project_no NUMBER(10)
+) -->
+<insert id="insertPre_scaning_step" parameterType="Pre_scaning_step">
+insert into pre_scaning_step(pre_no,pre_customer_no,pre_licence_pre,pre_os_environment,pre_encryption_column,project_no)
+VALUES(#{pre_no},#{pre_customer_no},#{pre_licence_pre},#{pre_os_environment},#{pre_encryption_column},#{project_no})
+</insert>
+
+<update id="updatePre_scaning_step" parameterType="Pre_scaning_step">
+update pre_scaning_step set
+	pre_no=#{pre_no},
+	pre_customer_no=#{pre_customer_no},
+	pre_licence_pre=#{pre_licence_pre},
+	pre_os_environment=#{pre_os_environment},
+	pre_encryption_column=#{pre_encryption_column},
+	project_no=#{project_no}
+</update>
+
+
+<!-- 사정환경조사서장비테이블
+create table equipment(
+		e_no NUMBER(10),
+		e_type VARCHAR2(50),
+		e_business VARCHAR2(200),
+		e_Dbcount NUMBER(10),
+		e_os VARCHAR2(200),
+		e_hostname VARCHAR2(200),
+		e_ip VARCHAR2(100),
+		e_port NUMBER(20),
+		e_sid VARCHAR2(20),
+		e_osid VARCHAR2(50),
+		e_ospw VARCHAR2(50),
+		e_dbid VARCHAR2(50),
+		e_dbpw VARCHAR2(50),
+		e_server VARCHAR2(200),
+		e_filter VARCHAR2(200),
+		e_encryptor VARCHAR2(100),
+		e_installpath VARCHAR2(1000),
+		e_applicationmethod VARCHAR2(1000),
+		e_details VARCHAR2(1000),
+		e_other VARCHAR2(1000),
+		e_custom_no VARCHAR2(10)
+);
+ -->
+<insert id="insertEquipment" parameterType="Equipment">
+insert into equipment(e_no,e_type,e_business,e_Dbcount,e_os,e_hostname,e_ip,e_port,e_sid,e_osid,e_ospw,e_dbid,e_dbpw,e_server,e_filter,e_encryptor,e_installpath,e_applicationmethod,e_details,e_other,e_custom_no)
+	VALUES(#{e_no},#{e_type},#{e_business},#{e_Dbcount},#{e_os},#{e_hostname},#{e_ip},#{e_port},#{e_sid},#{e_osid},#{e_ospw},#{e_dbid},#{e_dbpw},#{e_server},#{e_filter},#{e_encryptor},#{e_installpath},#{e_applicationmethod},#{e_details},#{e_other},#{e_custom_no})
+</insert>
+
+<update id="updateEquipment" parameterType="Equipment">
+update equipment set
+		e_no=#{e_no},
+		e_type=#{e_type},
+		e_business=#{e_business},
+		e_Dbcount=#{e_Dbcount},
+		e_os=#{e_os},
+		e_hostname=#{e_hostname},
+		e_ip=#{e_ip},
+		e_port=#{e_port},
+		e_sid=#{e_sid},
+		e_osid=#{e_osid},
+		e_ospw=#{e_ospw},
+		e_dbid=#{e_dbid},
+		e_dbpw=#{e_dbpw},
+		e_server=#{e_server},
+		e_filter=#{e_filter},
+		e_encryptor=#{e_encryptor},
+		e_installpath=#{e_installpath},
+		e_applicationmethod=#{e_applicationmethod},
+		e_details=#{e_details},
+		e_other=#{e_other},
+		e_custom_no=#{e_custom_no}
+</update>
+
+<!-- 사전환경조사서 암호화대상정보테이블
+create table etl(
+		etl_no NUMBER(10),
+		etl_service VARCHAR2(50),
+		etl_schema VARCHAR2(50),
+		etl_table VARCHAR2(50),
+		etl_table_info VARCHAR2(1000),
+		etl_count NUMBER(100),
+		etl_calumn VARCHAR2(50),
+		etl_calumn_info VARCHAR2(1000),
+		etl_type VARCHAR2(50),
+		etl_length NUMBER(100),
+		etl_pk VARCHAR2(50),
+		etl_FK VARCHAR2(50),
+		etl_orther VARCHAR2(1000),
+		etl_policy VARCHAR2(50),
+		etl_trigger VARCHAR2(50),
+		etl_mview VARCHAR2(50),
+		etl_h_encrypt VARCHAR2(50),
+		etl_pfuntion VARCHAR2(50),
+		etl_devisioncalumn VARCHAR2(50),
+		etl_select VARCHAR2(50),
+		etl_from VARCHAR2(50),
+		etl_where VARCHAR2(50),
+		etl_hint VARCHAR2(50),
+		etl_customer_no NUMBER(10)
+); -->
+
+<insert id="insertEtl" parameterType="Etl">
+insert into etl(etl_no,etl_service,etl_schema,etl_table,etl_table_info,etl_count,etl_calumn,etl_calumn_info,etl_type,etl_length,etl_pk,etl_FK,etl_orther,etl_policy,etl_trigger,etl_mview,etl_h_encrypt,etl_pfuntion,etl_devisioncalumn,etl_select,etl_from,etl_where,etl_hint,etl_customer_no)
+VALUES(#{etl_no},#{etl_service},#{etl_schema},#{etl_table},#{etl_table_info},#{etl_count},#{etl_calumn},#{etl_calumn_info},#{etl_type},#{etl_length},#{etl_pk},#{etl_FK},#{etl_orther},#{etl_policy},#{etl_trigger},#{etl_mview},#{etl_h_encrypt},#{etl_pfuntion},#{etl_devisioncalumn},#{etl_select},#{etl_from},#{etl_where},#{etl_hint},#{etl_customer_no});
+</insert>
+
+<update id="updateEtl" parameterType="Etl">
+update etl set
+		etl_no=#{etl_no},
+		etl_service=#{etl_service},
+		etl_schema=#{etl_schema},
+		etl_table=#{etl_table},
+		etl_table_info=#{etl_table_info},
+		etl_count=#{etl_count},
+		etl_calumn=#{etl_calumn},
+		etl_calumn_info=#{etl_calumn_info},
+		etl_type=#{etl_type},
+		etl_length=#{etl_length},
+		etl_pk=#{etl_pk},
+		etl_FK=#{etl_FK},
+		etl_orther=#{etl_orther},
+		etl_policy=#{etl_policy},
+		etl_trigger=#{etl_trigger},
+		etl_mview=#{etl_mview},
+		etl_h_encrypt=#{etl_h_encrypt},
+		etl_pfuntion=#{etl_pfuntion},
+		etl_devisioncalumn=#{etl_devisioncalumn},
+		etl_select=#{etl_select},
+		etl_from=#{etl_from},
+		etl_where=#{etl_where},
+		etl_hint=#{etl_hint},
+		etl_customer_no=#{etl_customer_no}
+</update>
+
+
+<!-- 사전환경조사서 고객요구사항 테이블
+
+create table CUSTMER_DEMANDS(
+		cd_no NUMBER(10),
+		customer_no NUMBER(10),
+		cd_date SYSDATE(),
+		cd_writer VARCHAR2(20),
+		cd_sys_name VARCHAR2(30),
+		cd_demands_list_no NUMBER(10),
+		project_no NUMBER(10)
+); -->
+<insert id="insertCustomer_demands" parameterType="Customer_demands">
+insert into CUSTMER_DEMANDS (cd_no,customer_no,cd_date,cd_writer,cd_sys_name,cd_demands_list_no,project_no)
+VALUES(#{cd_no},#{customer_no},#{cd_date},#{cd_writer},#{cd_sys_name},#{cd_demands_list_no},#{project_no});
+</insert>
+
+<update id="updateCustomer_demands" parameterType="Customer_demands">
+update CUSTMER_DEMANDS set 
+		cd_no=#{cd_no},
+		customer_no=#{customer_no},
+		cd_date=#{cd_date},
+		cd_writer=#{cd_writer},
+		cd_sys_name=#{cd_sys_name},
+		cd_demands_list_no=#{cd_demands_list_no},
+		project_no=#{project_no}
+</update>
+
+<!-- 고객요구사항 테이블
+
+create table DEMANDS_LIST (
+		de_no NUMBER(10),
+		de_type VARCHAR2(20),
+		de_name VARCHAR2(200),
+		de_procese VARCHAR2(5000),
+		de_class VARCHAR2(20),
+		de_status CHAR(2),
+		de_level CHAR(2),
+		de_accommodation VARCHAR2(20),
+		de_provenance VARCHAR2(100),
+		de_note VARCHAR2(200),
+		demands_no NUMBER(10)
+); -->
+<insert id="insertDemands_list" parameterType="Demands_list">
+insert into DEMANDS_LIST (de_no,de_type,de_name,de_procese,de_class,de_status,de_level,de_accommodation,de_provenance,de_note,demands_no)
+VALUES(#{de_no},#{de_type},#{de_name},#{de_procese},#{de_class},#{de_status},#{de_level},#{de_accommodation},#{de_provenance},#{de_note},#{demands_no});
+</insert>
+
+<update id="updateDemands_list" parameterType="Demands_list">
+update DEMANDS_LIST set 
+		de_no=#{de_no},
+		de_type=#{de_type},
+		de_name=#{de_name},
+		de_procese=#{de_procese},
+		de_class=#{de_class},
+		de_status=#{de_status},
+		de_level=#{de_level},
+		de_accommodation=#{de_accommodation},
+		de_provenance=#{de_provenance},
+		de_note=#{de_note},
+		demands_no=#{demands_no}
+</update>
+
+
+<!-- 이슈테이블
+create table ISSUE_LIST (
+		is_no NUMBER(10),
+		project_no NUMBER(10),
+		is_content VARCHAR2(1000),
+		is_problem VARCHAR2(5000),
+		is_solution VARCHAR2(5000),
+		is_date SYSDATE,
+		is_completion SYSDATE,
+		is_note VARCHAR2(1000),
+		is_com_fail VARCHAR2(2),
+		is_state NUMBER(3)
+); -->
+<insert id="insertIssue_list" parameterType="Issue_list">
+insert into ISSUE_LIST (is_no,project_no,is_content,is_problem,is_solution,is_date,is_completion,is_note,is_com_fail,is_state)
+VALUES(#{is_no},#{project_no},#{is_content},#{is_problem},#{is_solution},#{is_date},#{is_completion},#{is_note},#{is_com_fail},#{is_state});
+</insert>
+
+<update id="updateIssue_list" parameterType="Issue_list">
+update ISSUE_LIST set 
+		is_no=#{is_no},
+		project_no=#{project_no},
+		is_content=#{is_content},
+		is_problem=#{is_problem},
+		is_solution=#{is_solution},
+		is_date=#{is_date},
+		is_completion=#{is_completion},
+		is_note=#{is_note},
+		is_com_fail=#{is_com_fail},
+		is_state=#{is_state}
+</update>
+
+<!-- 주간보고 테이블
+create table week_report (
+		re_no NUMBER(10),
+		re_custom NUMBER(10),
+		re_content VARCHAR2(1000),
+		re_startday SYSDATE,
+		re_finishday SYSDATE,
+		re_writer NUMBER(10),
+		re_project_no SYSDATE,
+		re_notice VARCHAR2(2000)
+); -->
+<insert id="insertWeek_report" parameterType="Week_report">
+insert into week_report (re_no,re_custom,re_content,re_startday,re_finishday,re_writer,re_project_no,re_notice)
+VALUES(#{re_no},#{re_custom},#{re_content},#{re_startday},#{re_finishday},#{re_writer},#{re_project_no},#{re_notice});
+</insert>
+
+<update id="updateWeek_report" parameterType="Week_report">
+update week_report set 
+		re_no=#{re_no},
+		re_custom=#{re_custom},
+		re_content=#{re_content},
+		re_startday=#{re_startday},
+		re_finishday=#{re_finishday},
+		re_writer=#{re_writer},
+		re_project_no=#{re_project_no},
+		re_notice=#{re_notice}
+</update>
+
+
+		
+<!-- 제품 정보담는 테이블		
+create table product_list(
+		p_no NUMBER(10),
+		p_type VARCHAR2(10),
+		p_name VARCHAR2(20)
+); -->
+<insert id="insertProductList" parameterType="Product">
+insert into product_list(p_no,p_type,p_name)VALUES(#{p_no},#{p_type},#{p_name});
+</insert>
+
+<update id="updateProductList" parameterType="Product">
+update product_list set 
+		p_no=#{p_no},
+		p_type=#{p_type},
+		p_name=#{p_name}
+</update>
+		
+<!--  유저(고객)정보 테이블
+create table user(
+		u_no NUMBER(10),
+		u_id VARCHAR2(10),
+		u_pw VARCHAR2(10),
+		u_name VARCHAR2(20),
+		u_company VARCHAR2(20),
+		u_dept NUMBER(2),
+		u_mail VARCHAR2(20),
+		u_pnumber NUMBER(14),
+		u_onumber NUMBER(14),
+		u_date SYSDATE,
+		u_segmentation VARCHAR2(15),
+		u_permission CHAR(1),
+		u_type CHAR(2)
+); -->
+<insert id="insertUser" parameterType="User">
+insert into user(u_no,u_id,u_pw,u_name,u_company,u_dept,u_mail,u_pnumber,u_onumber,u_dateu_segmentation,u_permission,u_type)
+VALUES(#{u_no},#{u_id},#{u_pw},#{u_name},#{u_company},#{u_dept},#{u_mail},#{u_pnumber},#{u_onumber},#{u_date}#{u_segmentation},#{u_permission},#{u_type});
+</insert>
+
+<update id="updateUser" parameterType="User">
+update user set
+		u_no=#{u_no},
+		u_id=#{u_id},
+		u_pw=#{u_pw},
+		u_name=#{u_name},
+		u_company=#{u_company},
+		u_dept=#{u_dept},
+		u_mail=#{u_mail},
+		u_pnumber=#{u_pnumber},
+		u_onumber=#{u_onumber},
+		u_date=#{u_date},
+		u_segmentation=#{u_segmentation},
+		u_permission=#{u_permission}, 
+		u_type=#{u_type}		
+</update>
+</mapper>

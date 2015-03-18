@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ksign.service.board.BoardMapper">
+<!-- 게시판 테이블
+create table BOARD (
+		b_no NUMBER(10),
+		b_type NUMBER(2),
+		product_no NUMBER(10),
+		b_title VARCHAR2(20),
+		b_content VARCHAR2(5000),
+		b_write VARCHAR2(10),
+		b_date SYSDATE,
+		b_count NUMBER(10),
+		b_plusfile1 VARCHAR2(20),
+		b_plusfile2 VARCHAR2(20),
+		b_reference_noNUMBER(10),
+		b_reply_dep NUMBER(50),
+		b_reply_order NUMBER(50),
+		b_reply_count NUMBER(20),
+		m_no NUMBER(10)
+); -->
+	<insert id="insertBoard" parameterType="Board">
+	insert into BOARD (b_no,b_type,product_no,b_title,b_content,b_write,b_date,b_count,b_plusfile1,b_plusfile2,b_reference_no,b_reply_dep,b_reply_order,b_reply_count,m_no)
+	VALUES(board_sequence.nextval,#{b_type},#{product_no},#{b_title},#{b_content},#{b_write},sysdate,0,#{b_plusfile1},#{b_plusfile2},#{b_reference_no},#{b_reply_dep}#{b_reply_order},#{b_reply_count},#{m_no});
+	</insert>
+	
+	<update id="updateBoard" parameterType="Board">
+	update BOARD set 
+			product_no=#{product_no},
+			b_title=#{b_title},
+			b_content=#{b_content},
+			b_write=#{b_write},
+			b_plusfile1=#{b_plusfile1},
+			b_plusfile2=#{b_plusfile2},
+			WHERE B_NO=#{b_no}
+	</update>
+	
+	<select id="readBoard" parameterType="java.lang.Integer" resultType="Board">
+		SELECT b_no,b_type,product_no,b_title,b_content,b_write,b_date,b_count,b_plusfile1,b_plusfile2 
+		FROM BOARD
+		WHERE B_NO = #{b_no}
+	</select>
+	
+	<update id="updateBoardCount" parameterType="java.lang.Integer">
+		UPDATE BOARD SET 
+		B_COUNT=#{B_count}
+		WHERE B_NO=#{b_no}
+	</update>
+	
+	<delete id="deleteBoard" parameterType="Board">
+		DELETE FROM BOARD
+		WHERE B_NO=#{b_no}
+	</delete>
+	
+	<delete id="deleteReply" parameterType="Board">
+		DELETE FROM REPLY
+		WHERE B_NO = #{b_no}
+	</delete>
+	
+	<select id="selectBoardlist" parameterType="java.util.HashMap" resultType="Board">
+		SELECT *
+	     FROM
+	     (
+          SELECT rownum idx2, t.*
+          FROM
+          (
+            SELECT rownum idx, s.* 
+	          FROM
+	          (
+	              SELECT b_no,b_type,product_no,b_title,b_content,b_write,b_date,b_count,b_plusfile1,b_plusfile2, (SELECT COUNT(*) FROM REPLY R WHERE R.B_NO = B.B_NO) AS B_REPLY_COUNT      
+	              FROM BOARD B
+	              
+	          		<if test="b_type != null and b_type == 'title'">
+	    	        	WHERE BOARD_TITLE like '%' || #{b_content} || '%'
+			  	    </if>
+		            <if test="b_type != null and b_type == 'content'">
+			    		WHERE BOARD_CONTENT like '%' || #{b_content} || '%'
+			  	    </if>
+		            <if test="b_type != null and b_type == 'boardType'">
+			    		WHERE BOARD_TYPE like '%' || #{b_type} || '%'
+			  	    </if>
+	              ORDER BY B_NO asc
+	          ) s
+
+            ORDER BY B_NO desc
+
+          ) t
+	        
+	     )
+	     WHERE <![CDATA[ idx2 >= #{startRowNum} AND idx2 <= #{endRowNum} ]]>
+	</select>
+
+	<select id="countBoard" parameterType="java.util.HashMap" resultType="Integer">
+		SELECT count(*)
+        FROM BOARD
+        <if test="board_type != null and board_type == 'title'">
+	    	WHERE BOARD_TITLE like '%' || #{board_content} || '%'
+	  	</if>
+        <if test="board_type != null and board_type == 'content'">
+	    	WHERE BOARD_CONTENT like '%' || #{board_content} || '%'
+	  	</if>
+        <if test="board_type != null and board_type == 'boardType'">
+	    	WHERE BOARD_CONTENT like '%' || #{board_content} || '%'
+	  	</if>
+        ORDER BY BOARD_NO desc
+	</select>
+	
+	
+	
+	
+	
+	<select id="selectBoardReplylist" parameterType="java.util.HashMap" resultType="Board">
+		SELECT *
+	     FROM
+	     (
+          SELECT rownum idx2, t.*
+          FROM
+          (
+            SELECT rownum idx, s.* 
+	          FROM
+	          (
+	              SELECT DISTINCT B.BOARD_NO,  B.BOARD_TITLE, B.BOARD_CONTENT, B.BOARD_WRITER, B.BOARD_FILENAME, B.BOARD_COUNT, B.BOARD_DATE
+	              , (SELECT COUNT(*) FROM REPLY R WHERE R.BOARD_NO = B.BOARD_NO) AS B_REPLY_COUNT      
+	              FROM BOARD B, REPLY R
+   	        	  WHERE  B.BOARD_NO = R.BOARD_NO AND R.REPLY_CONTENT LIKE '%' || #{board_content} || '%' 
+	              ORDER BY B.BOARD_NO asc
+	          ) s
+
+            ORDER BY BOARD_NO desc
+
+          ) t
+	        
+	     )
+	     WHERE <![CDATA[ idx2 >= #{startRowNum} AND idx2 <= #{endRowNum} ]]>
+	</select>
+
+	<select id="countBoardReply" parameterType="java.util.HashMap" resultType="Integer">
+		SELECT COUNT(*) 
+		FROM
+		(
+			SELECT DISTINCT B.B_NO
+	        FROM BOARD B, REPLY R
+		    WHERE  B.B_NO = R.B_NO AND R.REPLY_CONTENT LIKE '%' || #{b_content} || '%' 
+	        ORDER BY B.B_NO desc
+        )
+	</select>
+
+</mapper>

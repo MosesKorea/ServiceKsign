@@ -1,0 +1,25 @@
+table,th,td {
+	border:1px solid black;
+	border-collapse:collapse;
+}
+
+.seq{
+	width: 100px;
+	text-align: center;
+}
+.juso{
+	width: 300px;
+	text-align: center;
+}
+.jumin{
+	width: 300px;
+	text-align: center;
+}
+
+
+.decryptobtn{
+	text-align: center;
+}
+.mainbtn{
+	text-align: center;
+}

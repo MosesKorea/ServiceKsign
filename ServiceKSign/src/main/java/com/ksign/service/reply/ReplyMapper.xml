@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ksign.service.reply.ReplyMapper">
+
+	<insert id="insertRely" parameterType="Reply">
+		INSERT INTO REPLY(REPLY_NO, REPLY_CONTENT, REPLY_WRITER, REPLY_PW, REPLY_REFERENCE_NO, REPLY_DEP, REPLY_ORDER, BOARD_NO)
+		VALUES(reply_sequence.nextval,#{reply_content},#{reply_writer},#{reply_pw},reply_sequence.currval,0,0,#{board_no})
+	</insert>
+
+	<select id="selectReplyList" parameterType="java.lang.Integer" resultType="Reply">
+		SELECT REPLY_NO, REPLY_CONTENT, REPLY_WRITER, REPLY_PW, REPLY_DATE, REPLY_REFERENCE_NO, REPLY_DEP, REPLY_ORDER, REPLY_STATUS, BOARD_NO 
+		FROM REPLY
+		WHERE BOARD_NO = #{board_no}
+		ORDER BY REPLY_REFERENCE_NO DESC, REPLY_ORDER ASC
+	</select>
+
+	<select id="readReply" parameterType="java.lang.Integer" resultType="Reply">
+		SELECT REPLY_NO, REPLY_CONTENT, REPLY_WRITER, REPLY_PW, REPLY_DATE, REPLY_REFERENCE_NO, REPLY_DEP, REPLY_ORDER, BOARD_NO  
+		FROM REPLY
+		WHERE REPLY_NO = #{reply_no}
+	</select>
+
+	<insert id="insertRelyRely" parameterType="java.util.HashMap">
+		INSERT INTO REPLY(REPLY_NO, REPLY_CONTENT, REPLY_WRITER, REPLY_PW, REPLY_REFERENCE_NO, REPLY_DEP, REPLY_ORDER, BOARD_NO)
+		VALUES(reply_sequence.nextval,#{reply_content},#{reply_writer},#{reply_pw},#{reply_reference_no},#{reply_dep}+1,#{reply_order}+1,#{board_no})
+	</insert>
+
+	<update id="addStep" parameterType="java.util.HashMap">
+		UPDATE REPLY SET 
+		REPLY_ORDER = REPLY_ORDER + 1
+		<![CDATA[ WHERE REPLY_REFERENCE_NO = #{reply_reference_no} AND REPLY_ORDER > #{reply_order} ]]>
+	</update>
+
+	<update id="updateReply" parameterType="Reply">
+		UPDATE REPLY SET 
+		REPLY_CONTENT=#{reply_content},
+		REPLY_WRITER=#{reply_writer}
+		WHERE REPLY_NO=#{reply_no}
+	</update>
+	
+	<update id="changeReplyStatus" parameterType="java.lang.Integer">
+		UPDATE REPLY SET 
+		REPLY_STATUS=1
+		WHERE REPLY_NO=#{reply_no}
+	</update>
+
+	<delete id="deleteReply" parameterType="java.lang.Integer">
+		DELETE FROM REPLY
+		WHERE REPLY_NO=#{reply_no}
+	</delete>
+	
+	<select id="getReplyCount" parameterType="java.util.HashMap" resultType="Integer">
+		SELECT COUNT(*)
+		FROM REPLY
+		WHERE REPLY_REFERENCE_NO = #{reply_reference_no} AND REPLY_DEP > #{reply_dep}
+	</select>
+	
+	
+</mapper>

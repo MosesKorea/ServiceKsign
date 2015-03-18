@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.securedb.test.TableMapper"> 
+
+	<insert id="insertTable" parameterType="Table">
+		INSERT INTO TEST_TABLE (SEQ, JUMIN, JUSO)
+		VALUES (#{seq},#{jumin},#{juso})
+	</insert>
+	<insert id="insertTable_en" parameterType="Table">
+		INSERT INTO TEST_TABLE_en (SEQ, JUMIN, JUSO)
+		VALUES (#{seq},#{jumin},#{juso})
+	</insert>
+	<insert id="insertTable_de" parameterType="Table">
+		INSERT INTO TEST_TABLE (SEQ, JUMIN, JUSO)
+		VALUES (#{seq},#{jumin},#{juso})
+	</insert>
+	
+	<update id="updateTable" parameterType="Table">
+		UPDATE TEST_TABLE SET 
+		SEQ=#{seq},
+		JUMIN=#{jumin},
+		JUSO=#{juso}
+		WHERE SEQ=#{seq}
+	</update>
+	<update id="updateTable_en" parameterType="Table">
+		UPDATE TEST_TABLE_EN SET 
+		SEQ=#{seq},
+		JUMIN=#{jumin},
+		JUSO=#{juso}
+		WHERE SEQ=#{seq}
+	</update>
+	<update id="updateTable_de" parameterType="Table">
+		UPDATE TEST_TABLE_DE SET 
+		SEQ=#{seq},
+		JUMIN=#{jumin},
+		JUSO=#{juso}
+		WHERE SEQ=#{seq}
+	</update>
+	
+	<delete id="deleteTable" parameterType="Table">
+		DELETE FROM TEST_TABLE
+		WHERE SEQ=#{seq}
+	</delete>
+	<delete id="deleteTable_en" parameterType="Table">
+		DELETE FROM TEST_TABLE_EN
+		WHERE SEQ=#{seq}
+	</delete>
+	<delete id="deleteTable_de" parameterType="Table">
+		DELETE FROM TEST_TABLE_DE
+		WHERE SEQ=#{seq}
+	</delete>
+	
+	<select id="selectOen" parameterType="java.lang.Integer" resultType="Table">
+		select * from TEST_TABLE where SEQ=#{seq}
+	</select>
+	<select id="selectOen_en" parameterType="java.lang.Integer" resultType="Table">
+		select * from TEST_TABLE_EN where SEQ=#{seq}
+	</select>
+	<select id="selectOen_de" parameterType="java.lang.Integer" resultType="Table">
+		select * from TEST_TABLE_DE where SEQ=#{seq}
+	</select>
+	
+	<select id="selectAll">
+		select * from TEST_TABLE
+	</select>
+	<select id="selectAll_en">
+		select * from TEST_TABLE_EN
+	</select>
+	<select id="selectAll_de">
+		select * from TEST_TABLE_DE
+	</select>
+	
+</mapper>

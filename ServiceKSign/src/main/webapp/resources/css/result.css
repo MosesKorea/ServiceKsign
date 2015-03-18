@@ -1,0 +1,60 @@
+table,th,td {
+	border:1px solid black;
+	border-collapse:collapse;
+}
+
+.insertResultTime{
+	width: 150px;
+	text-align: center;
+}
+
+.insertEnResultTime{
+	width: 150px;
+	text-align: center;
+}
+
+.insertDeResultTime{
+	width: 150px;
+	text-align: center;
+}
+
+.selectResultTime{
+	width: 150px;
+	text-align: center;
+}
+
+.selectEnResultTime{
+	width: 150px;
+	text-align: center;
+}
+
+.selectDeResultTime{
+	width: 150px;
+	text-align: center;
+}
+
+.deleteResultTime{
+	width: 150px;
+	text-align: center;
+}
+
+.deleteEnResultTime{
+	width: 150px;
+	text-align: center;
+}
+
+.deleteDeResultTime{
+	width: 150px;
+	text-align: center;
+}
+
+.totalResultTime{
+	width: 150px;
+	text-align: center;
+}
+
+.retourn_btn{
+	text-align: center;
+}
+
+
