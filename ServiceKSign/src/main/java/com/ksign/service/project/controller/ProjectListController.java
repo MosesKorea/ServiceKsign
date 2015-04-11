@@ -1,5 +1,23 @@
 package com.ksign.service.project.controller;
 
-public class ProjectListController {
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
+@Controller
+public class ProjectListController {
+	
+	public ProjectListController() {
+		// TODO Auto-generated constructor stub
+		System.out.println("### ProjectListController()생성자");
+	}
+	
+	
+	@RequestMapping(value = "/projectList", method = RequestMethod.GET)
+	public String home(Model model) throws Exception{
+			
+			
+		return "project/project_list";
+	}
 }

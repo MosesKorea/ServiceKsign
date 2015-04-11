@@ -106,7 +106,7 @@
   		<div class="subnavbar-inner">
 	    <div class="container">
 	      <ul class="mainnav">
-	        <li class="active"> <a href="#"><span class="glyphicon glyphicon-list-alt"></span><span>공지사항</span></a> </li>
+	        <li class="active"> <a href="./projectList"><span class="glyphicon glyphicon-list-alt"></span><span>공지사항</span></a> </li>
 	        <li><a href="services.html"><span class="glyphicon glyphicon-list-alt"></span><span>이슈</span></a> </li>
 	        <li class="subnavbar-open-right"> <a href="contact.html"><span class="glyphicon glyphicon-list-alt"></span><span>채널 공지사항</span></a></li>
 	        <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown"><span class="glyphicon glyphicon-list-alt"></span><span>채널이슈</span><b class="caret"></b></a>
