@@ -10,19 +10,9 @@
 	<div class="main-inner">
 		<div class="container">
 		<div class="row">
-			<!--왼쪽 목록  메뉴 -->
-			<div class="col-md-2 left_list">
-				<div class="panel panel-default">
-				<div class="panel-heading">네비게이션 제목</div>	
-					<ul class="nav nav-pills nav-stacked">
-						<li role="presentation" class="active"><a href="#">메뉴1</a></li>
-						<li role="presentation"><a href="#">메뉴2</a></li>
-						<li role="presentation"><a href="#">메뉴3</a></li>
-						<li role="presentation"><a href="#">메뉴4</a></li>
-						<li role="presentation"><a href="#">메뉴5</a></li>
-					</ul>
-				</div>
-            </div>
+			
+			<%@ include file="project_left_list.jsp" %>
+
             <!-- /.col-md-3 왼쪽사이드 메뉴  end-->
 			<div class="col-md-1"></div>
 			<div class="col-md-9">
@@ -57,23 +47,30 @@
 							<table class="table">
 								<thead>
 									<tr>
-										<td>1</td>
-										<td>2</td>
-										<td>3</td>
-										<td>4</td>
-										<td>5</td>
+										<td>프로젝트명</td>
+										<td>고객구분</td>
+										<td>진행상황</td>
+										<td>고객사</td>
+										<td>구축완료일</td>
 									</tr>
 								</thead>
 								<tbody>
-	                <%-- <c:forEach var="project" items="${projectList }"> --%>
+	               			 <%-- <c:forEach var="project" items="${projectList }"> --%>
 									<tr>
-										<td>1</td>
-										<td>2</td>
-										<td>3</td>
-										<td>4</td>
-										<td>5</td>
+										<td><a href="./projectView">환화생명</a></td>
+										<td>금융</td>
+										<td>100%</td>
+										<td>환화생명</td>
+										<td>2013-09-26</td>
 									</tr>
-					<%-- </c:forEach>  --%>
+									<tr>
+										<td><a href="./projectView">시도새올</a></td>
+										<td>공공</td>
+										<td>100%</td>
+										<td>시도새올유지사업단</td>
+										<td>2014-12-31</td>
+									</tr>
+							<%-- </c:forEach>  --%>
 								</tbody>
 							</table>
 						</div>

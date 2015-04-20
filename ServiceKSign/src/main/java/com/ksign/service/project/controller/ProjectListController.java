@@ -15,7 +15,7 @@ public class ProjectListController {
 	
 	
 	@RequestMapping(value = "/projectList", method = RequestMethod.GET)
-	public String home(Model model) throws Exception{
+	public String projectlist(Model model) throws Exception{
 			
 			
 		return "project/project_list";

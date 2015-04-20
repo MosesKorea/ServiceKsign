@@ -81,16 +81,16 @@
 						<!-- logout 처리시 SSO세션 초기화 및 메인 페이지로 이동 --> <a href="#">logout</a>
 					</li>
 					<li>
-						<!-- 나에게 해당하는 이슈 알림 --> <a href="#"><span class="glyphicon glyphicon-comment"></span> new <b class="new-count">7</b><span class="caret"></span></a>
+						<!-- 나에게 해당하는 이슈 알림 --> <a href="#"><span class="glyphicon glyphicon-comment"></span> mypage</a>
 					</li>
 					<li class="dropdown">
-                        <a class="dropdown-toggle" href="#" data-toggle="dropdown"><span class="glyphicon glyphicon-cog"></span>설정<b class="caret"></b></a>
+                        <a class="dropdown-toggle" href="#" data-toggle="dropdown"><span class="glyphicon glyphicon-cog"></span>일정<b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             <li>
-                                <a href="full-width.html">이슈등록</a>
+                                <a href="full-width.html">일정생성</a>
                             </li>
                             <li>
-                                <a href="sidebar.html">내가등록한 이슈</a>
+                                <a href="sidebar.html">일정수정</a>
                             </li>
                         </ul>
                     </li>
@@ -106,45 +106,42 @@
   		<div class="subnavbar-inner">
 	    <div class="container">
 	      <ul class="mainnav">
-	        <li class="active"> <a href="./projectList"><span class="glyphicon glyphicon-list-alt"></span><span>공지사항</span></a> </li>
-	        <li><a href="services.html"><span class="glyphicon glyphicon-list-alt"></span><span>이슈</span></a> </li>
-	        <li class="subnavbar-open-right"> <a href="contact.html"><span class="glyphicon glyphicon-list-alt"></span><span>채널 공지사항</span></a></li>
-	        <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown"><span class="glyphicon glyphicon-list-alt"></span><span>채널이슈</span><b class="caret"></b></a>
+	        <li class="active dropdown"> <a href="./projectList"><span class="glyphicon glyphicon-list-alt"></span><span>프로젝트</span><b class="caret"></b></a></li>
+	        <li class="dropdown"><a href="services.html"><span class="glyphicon glyphicon-list-alt"></span><span>유지보수</span><b class="caret"></b></a></li>
+	        <li class="dropdown"> <a class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-list-alt"></span><span>고객정보</span></a><b class="caret"></b>
+	        	<ul class="dropdown-menu">
+							<li><a href="portfolio-1-col.html">고객정보 생성</a></li>
+							<li><a href="portfolio-1-col.html">고객정보 수정</a></li>
+				</ul>
+	        </li>
+	        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-list-alt"></span><span>재품관리</span><b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             <li>
-                                <a href="portfolio-1-col.html">채널 신규 이슈</a>
+                                <a href="portfolio-1-col.html">제품 등록</a>
                             </li>
                             <li>
-                                <a href="portfolio-1-col.html">채널 해결 이슈</a>
+                                <a href="portfolio-1-col.html">제품 수정</a>
                             </li>
                             <li>
-                                <a href="portfolio-1-col.html">채널 완료 이슈</a>
+                                <a href="portfolio-1-col.html">제품 삭제</a>
                             </li>
                         </ul></li>
-	        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-list-alt"></span><span>지식공유</span><span class="caret"></span></a>
+	        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-list-alt"></span><span>일정관리</span><span class="caret"></span></a>
                         <ul class="dropdown-menu">
                             <li>
-                                <a href="blog-home-1.html">제품개선사항</a>
+                                <a href="blog-home-1.html">일정 생성</a>
                             </li>
                             <li>
-                                <a href="blog-home-2.html">버전자료실</a>
-                            </li>
-                        </ul></li>
-	        <li class="dropdown subnavbar-open-right">
-					        <a class="dropdown-toggle" data-toggle="dropdown">
-					        	<span class="glyphicon glyphicon-list-alt"></span>
-					        	<span>설정</span>
-					        	<b class="caret"></b>
-					        </a>
-	                        <ul class="dropdown-menu">
-                            <li>
-                                <a href="full-width.html">이슈등록</a>
+                                <a href="blog-home-2.html">일정 수정</a>
                             </li>
                             <li>
-                                <a href="sidebar.html">내가등록한 이슈</a>
+                                <a href="blog-home-2.html">이슈 생성</a>
+                            </li>
+                            <li>
+                                <a href="blog-home-2.html">이슈 수정</a>
                             </li>
                         </ul>
-	        </li>
+            </li>
 	      </ul>
 	    </div>
 	    <!-- /container --> 
