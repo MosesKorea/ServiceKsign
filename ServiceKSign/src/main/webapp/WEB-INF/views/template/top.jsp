@@ -75,10 +75,10 @@
             	<!-- navbar-right -->
 				<ul class="nav navbar-nav navbar-right">
 					<li>
-						<!-- SSO고객 이름 --> <a href="#">ooo 님</a>
+						<a href="#">ooo 님</a>
 					</li>
 					<li>
-						<!-- logout 처리시 SSO세션 초기화 및 메인 페이지로 이동 --> <a href="#">logout</a>
+						<a href="#">logout</a>
 					</li>
 					<li>
 						<!-- 나에게 해당하는 이슈 알림 --> <a href="#"><span class="glyphicon glyphicon-comment"></span> mypage</a>
