@@ -39,20 +39,24 @@
 						</div>
 						<form role="form">
 							<div class="row setup-content" id="step-1">
-							<!-- 고객정보 입력 -->
+								<!-- 고객정보 입력 -->
 								<%@ include file="./create_customer.jsp" %>
+								<div style="visibility: hidden;"><input  type="text" required="required" class="form-control" placeholder="넘기기" /></div>
 							</div>
 							<div class="row setup-content" id="step-2">
-							<!-- 고객장비 환경 & 설치 정보 입력 -->
+								<!-- 고객장비 환경 & 설치 정보 입력 -->
 								<%@ include file="./create_equioment.jsp" %>
+								<div style="visibility: hidden;"><input  type="text" required="required" class="form-control" placeholder="넘기기" /></div>
 							</div>
 							<div class="row setup-content" id="step-3">
 								<!-- 고객 요구사항 입력 -->
 								<%@ include file="./create_etl.jsp" %>
+								<div style="visibility: hidden;"><input  type="text" required="required" class="form-control" placeholder="넘기기" /></div>
 							</div>
 							<div class="row setup-content" id="step-4">
 								<!-- 입력정보 확인 -->
 								<%@ include file="./create_customer_demands.jsp" %>
+								<div style="visibility: hidden;"><input  type="text" required="required" class="form-control" placeholder="넘기기" /></div>
 							</div>
 						</form>
 						<!-- ./form end -->

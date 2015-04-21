@@ -15,7 +15,7 @@
 				<label class="control-label">서비스명</label>
 			</div>
 			<div class="col-md-10 ">
-				<input maxlength="100" type="text" required="required" class="form-control" placeholder="서비스명" name="etl_service" />
+				<input  type="text" required="required" class="form-control" placeholder="서비스명" name="etl_service" />
 			</div>
 		</div>
 		<div class="form-group" style="padding-bottom: 30px">
@@ -23,143 +23,167 @@
 				<label class="control-label">스키마명</label>
 			</div>
 			<div class="col-md-10 ">
-				<input maxlength="100" type="text" required="required" class="form-control" placeholder="스키마명" name="etl_business" />
+				<input  type="text" required="required" class="form-control" placeholder="스키마명" name="etl_schema" />
 			</div>
 		</div>
 		<div class="form-group" style="padding-bottom: 30px">
 			<div class="col-md-2 ">
-				<label class="control-label">DB수량</label>
+				<label class="control-label">테이블명</label>
 			</div>
 			<div class="col-md-10 ">
-				<input maxlength="100" type="text" required="required" class="form-control" placeholder="DB수량" name="etl_dbcount"/>
+				<input  type="text" required="required" class="form-control" placeholder="테이블명" name="etl_table"/>
 			</div>
 		</div>
 		<div class="form-group" style="padding-bottom: 30px">
 			<div class="col-md-2 ">
-				<label class="control-label">OS</label>
+				<label class="control-label">테이블설명</label>
 			</div>
 			<div class="col-md-10 ">
-				<input maxlength="100" type="text" required="required" class="form-control" placeholder="OS name" name="etl_os"/>
+				<input  type="text" required="required" class="form-control" placeholder="테이블 설명" name="etl_yable_info"/>
 			</div>
 		</div>
 		<div class="form-group" style="padding-bottom: 30px">
 			<div class="col-md-2 ">
-				<label class="control-label">HOSTNAME</label>
+				<label class="control-label">건수</label>
 			</div>
 			<div class="col-md-10 ">
-				<input maxlength="100" type="text" required="required" class="form-control" placeholder="HOSTNAME" name="etl_hostname"/>
+				<input  type="text" required="required" class="form-control" placeholder="암호화 건수" name="etl_count"/>
 			</div>
 		</div>
 		<div class="form-group" style="padding-bottom: 30px">
 			<div class="col-md-2 ">
-				<label class="control-label">IP</label>
+				<label class="control-label">컬럼</label>
 			</div>
 			<div class="col-md-10 ">
-				<input maxlength="100" type="text" required="required" class="form-control" placeholder="IP" name="etl_IP"/>
+				<input  type="text" required="required" class="form-control" placeholder="컬럼" name="etl_calumn"/>
 			</div>
 		</div>
 		<div class="form-group" style="padding-bottom: 30px">
 			<div class="col-md-2 ">
-				<label class="control-label">PORT</label>
+				<label class="control-label">컬럼 설명</label>
 			</div>
 			<div class="col-md-10 ">
-				<input maxlength="100" type="text" required="required" class="form-control" placeholder="PORT" name="etl_port" />
+				<input  type="text" required="required" class="form-control" placeholder="컬럼 설명" name="etl_calumn_info" />
 			</div>
 		</div>
 		<div class="form-group" style="padding-bottom: 30px">
 			<div class="col-md-2 ">
-				<label class="control-label">SID</label>
+				<label class="control-label">타입</label>
 			</div>
 			<div class="col-md-10 ">
-				<input maxlength="100" type="text" required="required" class="form-control" placeholder="hostname" name="etl_hostname" />
+				<input  type="text" required="required" class="form-control" placeholder="컬럼 타입" name="etl_type" />
 			</div>
 		</div>
 		<div class="form-group" style="padding-bottom: 30px">
 			<div class="col-md-2 ">
-				<label class="control-label">OS ID</label>
+				<label class="control-label">컬럼 길이</label>
 			</div>
 			<div class="col-md-10 ">
-				<input maxlength="100" type="text" required="required" class="form-control" placeholder="OS ID" name="etl_osid" />
+				<input  type="text" required="required" class="form-control" placeholder="컬럼 길이" name="etl_length" />
 			</div>
 		</div>
 		<div class="form-group" style="padding-bottom: 30px">
 			<div class="col-md-2 ">
-				<label class="control-label">OS PASSWORD</label>
+				<label class="control-label">PK</label>
 			</div>
 			<div class="col-md-10 ">
-				<input maxlength="100" type="text" required="required" class="form-control" placeholder="OS PASSWORD" name="etl_ospw" />
+				<input  type="text" required="required" class="form-control" placeholder="PK" name="etl_pk" />
 			</div>
 		</div>
 		<div class="form-group" style="padding-bottom: 30px">
 			<div class="col-md-2 ">
-				<label class="control-label">DB ID</label>
+				<label class="control-label">FK</label>
 			</div>
 			<div class="col-md-10 ">
-				<input maxlength="100" type="text" required="required" class="form-control" placeholder="DB ID" name="etl_dbid" />
+				<input  type="text" required="required" class="form-control" placeholder="FK" name="etl_fk" />
 			</div>
 		</div>
 		<div class="form-group" style="padding-bottom: 30px">
 			<div class="col-md-2 ">
-				<label class="control-label">DB PASSWORD</label>
+				<label class="control-label">비고</label>
 			</div>
 			<div class="col-md-10 ">
-				<input maxlength="100" type="text" required="required" class="form-control" placeholder="DB PASSWORD" name="etl_dbpw" />
+				<input  type="text" required="required" class="form-control" placeholder="비고" name="etl_other" />
 			</div>
 		</div>
 		<div class="form-group" style="padding-bottom: 30px">
 			<div class="col-md-2 ">
-				<label class="control-label">SERVER VERSION</label>
+				<label class="control-label">POLICY</label>
 			</div>
 			<div class="col-md-10 ">
-				<input maxlength="100" type="text" required="required" class="form-control" placeholder="SERVER VERSION" name="etl_server" />
+				<input  type="text" required="required" class="form-control" placeholder="POLICY" name="etl_policy" />
 			</div>
 		</div>
 		<div class="form-group" style="padding-bottom: 30px">
 			<div class="col-md-2 ">
-				<label class="control-label">FILTER VERSION</label>
+				<label class="control-label">TRIGGER</label>
 			</div>
 			<div class="col-md-10 ">
-				<input maxlength="100" type="text" required="required" class="form-control" placeholder="FILTER VERSION" name="etl_filter" />
+				<input  type="text" required="required" class="form-control" placeholder="TRIGGER" name="etl_trigger" />
 			</div>
 		</div>
 		<div class="form-group" style="padding-bottom: 30px">
 			<div class="col-md-2 ">
-				<label class="control-label">AGENT VERSION</label>
+				<label class="control-label">VIEW</label>
 			</div>
 			<div class="col-md-10 ">
-				<input maxlength="100" type="text" required="required" class="form-control" placeholder="AGENT VERSION" name="etl_encryptor" />
+				<input  type="text" required="required" class="form-control" placeholder="VIEW 유무" name="etl_mview" />
 			</div>
 		</div>
 		<div class="form-group" style="padding-bottom: 30px">
 			<div class="col-md-2 ">
-				<label class="control-label">INSTALL PATH</label>
+				<label class="control-label">기암호화</label>
 			</div>
 			<div class="col-md-10 ">
-				<input maxlength="100" type="text" required="required" class="form-control" placeholder="INSTALL PATH" name="etl_installpath" />
+				<input  type="text" required="required" class="form-control" placeholder="기 암호화" name="etl_h_encrypt" />
 			</div>
 		</div>
 		<div class="form-group" style="padding-bottom: 30px">
 			<div class="col-md-2 ">
-				<label class="control-label">적용방식</label>
+				<label class="control-label">복수함수</label>
 			</div>
 			<div class="col-md-10 ">
-				<input maxlength="100" type="text" required="required" class="form-control" placeholder="적용방식(예: UDF, VIEW, API)" name="etl_applicationmethod" />
+				<input  type="text" required="required" class="form-control" placeholder="복수함수" name="etl_pfuntion" />
 			</div>
 		</div>
 		<div class="form-group" style="padding-bottom: 30px">
 			<div class="col-md-2 ">
-				<label class="control-label">세부사항</label>
+				<label class="control-label">구분컬럼</label>
 			</div>
 			<div class="col-md-10 ">
-				<input maxlength="100" type="text" required="required" class="form-control" placeholder="세부사항" name="etl_details" />
+				<input  type="text" required="required" class="form-control" placeholder="구분컬럼" name="etl_devisioncalumn" />
 			</div>
 		</div>
 		<div class="form-group" style="padding-bottom: 30px">
 			<div class="col-md-2 ">
-				<label class="control-label">기타</label>
+				<label class="control-label">SELECT</label>
 			</div>
 			<div class="col-md-10 ">
-				<input maxlength="100" type="text" required="required" class="form-control" placeholder="기타" name="etl_other" />
+				<input  type="text" required="required" class="form-control" placeholder="SELECT" name="etl_select" />
+			</div>
+		</div>
+		<div class="form-group" style="padding-bottom: 30px">
+			<div class="col-md-2 ">
+				<label class="control-label">FROM</label>
+			</div>
+			<div class="col-md-10 ">
+				<input  type="text" required="required" class="form-control" placeholder="FROM" name="etl_from" />
+			</div>
+		</div>
+		<div class="form-group" style="padding-bottom: 30px">
+			<div class="col-md-2 ">
+				<label class="control-label">WHERE</label>
+			</div>
+			<div class="col-md-10 ">
+				<input  type="text" required="required" class="form-control" placeholder="WHERE" name="etl_where" />
+			</div>
+		</div>
+		<div class="form-group" style="padding-bottom: 30px">
+			<div class="col-md-2 ">
+				<label class="control-label">HINT</label>
+			</div>
+			<div class="col-md-10 ">
+				<input  type="text" required="required" class="form-control" placeholder="HINT" name="etl_hint" />
 			</div>
 		</div>
 		<!-- 입력완료 -->

@@ -4,82 +4,92 @@
 	<div class="col-md-12">
 		<h3>Step 1. 고객사 정보 입력</h3>
 		<div class="form-group">
-			<div class="col-md-1 col-xs-1"></div>
-			<div class="col-md-4 col-xs-4">
-				<label class="control-label">기존고객</label> <input type="radio"
-					required="required" class="old_customer"
-					placeholder="Enter First Name" /> <label class="control-label">신규고객</label>
-				<input type="radio" required="required" class="new_customer"
-					placeholder="Enter First Name" />
-			</div>
-			<div class="col-md-5 col-xs-5"></div>
-			<div class="col-md-2 col-xs-2">
+			<div class="col-md-10 "></div>
+			<div class="col-md-2 ">
 				<button class="btn btn-primary" type="button" onclick="">고객
 					검색</button>
 			</div>
 		</div>
 		<div class="form-group" style="padding-bottom: 30px"></div>
 		<div class="form-group" style="padding-bottom: 30px">
-			<div class="col-md-2 col-xs-2">
-				<label class="control-label">고객구분</label>
+			<div class="col-md-2 ">
+				<label class="control-label">요구사항 목록</label>
 			</div>
-			<div class="col-md-10 col-xs-10">
-				<input maxlength="100" type="text" required="required"
-					class="form-control" placeholder="고객구분" />
-			</div>
-		</div>
-		<div class="form-group" style="padding-bottom: 30px">
-			<div class="col-md-2 col-xs-2">
-				<label class="control-label">고객명(site명)</label>
-			</div>
-			<div class="col-md-10 col-xs-10">
-				<input maxlength="100" type="text" required="required"
-					class="form-control" placeholder="site명" />
+			<div class="col-md-10 ">
+				<input  type="text" required="required"
+					class="form-control" placeholder="요구사항 타입" value="" name="de_type"/>
 			</div>
 		</div>
 		<div class="form-group" style="padding-bottom: 30px">
-			<div class="col-md-2 col-xs-2">
-				<label class="control-label">부서명</label>
+			<div class="col-md-2 ">
+				<label class="control-label">요구사항명</label>
 			</div>
-			<div class="col-md-10 col-xs-10">
-				<input maxlength="100" type="text" required="required"
-					class="form-control" placeholder="부서병" />
-			</div>
-		</div>
-		<div class="form-group" style="padding-bottom: 30px">
-			<div class="col-md-2 col-xs-2">
-				<label class="control-label">담당자</label>
-			</div>
-			<div class="col-md-10 col-xs-10">
-				<input maxlength="100" type="text" required="required"
-					class="form-control" placeholder="담당자" />
+			<div class="col-md-10 ">
+				<input  type="text" required="required"
+					class="form-control" placeholder="요구사항명" name="de_name" />
 			</div>
 		</div>
 		<div class="form-group" style="padding-bottom: 30px">
-			<div class="col-md-2 col-xs-2">
-				<label class="control-label">연락처(Office)</label>
+			<div class="col-md-2 ">
+				<label class="control-label">처리내용</label>
 			</div>
-			<div class="col-md-10 col-xs-10">
-				<input maxlength="100" type="text" required="required"
-					class="form-control" placeholder="사무실 연락처" />
-			</div>
-		</div>
-		<div class="form-group" style="padding-bottom: 30px">
-			<div class="col-md-2 col-xs-2">
-				<label class="control-label">연락처(PㆍH)</label>
-			</div>
-			<div class="col-md-10 col-xs-10">
-				<input maxlength="100" type="text" required="required"
-					class="form-control" placeholder="핸드폰 연락처" />
+			<div class="col-md-10 ">
+				<input  type="text" required="required"
+					class="form-control" placeholder="처리내용" name="de_procese"/>
 			</div>
 		</div>
 		<div class="form-group" style="padding-bottom: 30px">
-			<div class="col-md-2 col-xs-2">
-				<label class="control-label">E-mail</label>
+			<div class="col-md-2 ">
+				<label class="control-label">분류</label>
 			</div>
-			<div class="col-md-10 col-xs-10">
-				<input maxlength="100" type="text" required="required"
-					class="form-control" placeholder="E-mail" />
+			<div class="col-md-10 ">
+				<input  type="text" required="required"
+					class="form-control" placeholder="분류" name="de_class"/>
+			</div>
+		</div>
+		<div class="form-group" style="padding-bottom: 30px">
+			<div class="col-md-2 ">
+				<label class="control-label">중요도</label>
+			</div>
+			<div class="col-md-10 ">
+				<input  type="text" required="required"
+					class="form-control" placeholder="중요도" name="de_status"/>
+			</div>
+		</div>
+		<div class="form-group" style="padding-bottom: 30px">
+			<div class="col-md-2 ">
+				<label class="control-label">난이도</label>
+			</div>
+			<div class="col-md-10 ">
+				<input  type="text" required="required"
+					class="form-control" placeholder="난이도" name="de_level"/>
+			</div>
+		</div>
+		<div class="form-group" style="padding-bottom: 30px">
+			<div class="col-md-2 ">
+				<label class="control-label">수용여부</label>
+			</div>
+			<div class="col-md-10 ">
+				<input  type="text" required="required"
+					class="form-control" placeholder="수용여부" name="de_accommodation"/>
+			</div>
+		</div>
+		<div class="form-group" style="padding-bottom: 30px">
+			<div class="col-md-2 ">
+				<label class="control-label">출처</label>
+			</div>
+			<div class="col-md-10 ">
+				<input  type="text" required="required"
+					class="form-control" placeholder="출처" name="de_provenance"/>
+			</div>
+		</div>
+		<div class="form-group" style="padding-bottom: 30px">
+			<div class="col-md-2 ">
+				<label class="control-label">비고</label>
+			</div>
+			<div class="col-md-10 ">
+				<input  type="text" required="required"
+					class="form-control" placeholder="비고" name="de_note"/>
 			</div>
 		</div>
 		<div class="row" style="padding-top: 10px; padding-bottom: 30px">

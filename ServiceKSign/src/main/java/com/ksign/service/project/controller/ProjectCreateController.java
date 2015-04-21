@@ -20,6 +20,6 @@ public class ProjectCreateController {
 	@RequestMapping(value = "/projectCreate", method = RequestMethod.GET)
 	public String CreateCustomer(Model model) throws Exception{
 		
-		return "/project/project_create_customer";
+		return "/project/project_create";
 	}
 }

@@ -5,10 +5,10 @@
 				<div class="panel panel-default">
 				<div class="panel-heading">프로젝트</div>	
 					<ul class="nav nav-pills nav-stacked">
-						<li role="presentation" class="active"><a href="./projectCreate">프로젝트 생성</a></li>
-						<li role="presentation"><a href="#">프로젝트 수정</a></li>
-						<li role="presentation"><a href="#">이슈 생성</a></li>
-						<li role="presentation"><a href="#">이슈 수정</a></li>
+						<li role="presentation"><a href="./projectCreate">프로젝트 생성</a></li>
+						<li role="presentation"><a href="./projectList">프로젝트 수정</a></li>
+						<li role="presentation"><a href="./issueCreate">이슈 생성</a></li>
+						<li role="presentation"><a href="./issueUpdate">이슈 수정</a></li>
 					</ul>
 				</div>
             </div>

@@ -106,8 +106,8 @@
   		<div class="subnavbar-inner">
 	    <div class="container">
 	      <ul class="mainnav">
-	        <li class="active dropdown"> <a href="./projectList"><span class="glyphicon glyphicon-list-alt"></span><span>프로젝트</span><b class="caret"></b></a></li>
-	        <li class="dropdown"><a href="services.html"><span class="glyphicon glyphicon-list-alt"></span><span>유지보수</span><b class="caret"></b></a></li>
+	        <li class="dropdown"> <a href="./projectList"><span class="glyphicon glyphicon-list-alt"></span><span>프로젝트</span><b class="caret"></b></a></li>
+	        <li class="dropdown"><a href="./maintanceList"><span class="glyphicon glyphicon-list-alt"></span><span>유지보수</span><b class="caret"></b></a></li>
 	        <li class="dropdown"> <a class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-list-alt"></span><span>고객정보</span></a><b class="caret"></b>
 	        	<ul class="dropdown-menu">
 							<li><a href="portfolio-1-col.html">고객정보 생성</a></li>
