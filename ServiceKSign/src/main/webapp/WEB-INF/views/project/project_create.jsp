@@ -39,24 +39,77 @@
 						</div>
 						<form role="form">
 							<div class="row setup-content" id="step-1">
-								<!-- 고객정보 입력 -->
-								<%@ include file="./create_customer.jsp" %>
-								<div style="visibility: hidden;"><input  type="text" required="required" class="form-control" placeholder="넘기기" /></div>
+								<div class="col-xs-12">
+									<div class="col-md-12">
+										<h3>Step 1. 고객사 정보 입력</h3>
+										<div class="form-group">
+											<div class="col-md-1 "></div>
+											<div class="col-md-4">
+												<label class="control-label">기존고객</label> <input type="radio"
+													required="required" class="old_customer"
+													placeholder="Enter First Name" /> <label class="control-label">신규고객</label>
+												<input type="radio" required="required" class="new_customer"
+													placeholder="Enter First Name" />
+											</div>
+											<div class="col-md-5"><a style="visibility: hidden;"><input type="text" value="작성"></a></div>
+											<div class="col-md-2">
+												<button class="btn btn-primary" type="button" onclick="">고객 검색</button>
+											</div>
+										</div>
+										<div class="form-group" style="padding-bottom: 30px"></div>
+										<!-- 고객정보 입력 -->
+										<%@ include file="./customer/customer_create.jsp" %>
+										<div style="visibility: hidden;"><input  type="text" required="required" class="form-control" placeholder="넘기기" value="sss"/></div>
+										<div class="row" style="padding-top: 10px; padding-bottom: 30px">
+											<button class="btn btn-primary nextBtn btn-lg pull-right"
+												type="button">Next</button>
+										</div>
+									</div>
+								</div>
 							</div>
 							<div class="row setup-content" id="step-2">
-								<!-- 고객장비 환경 & 설치 정보 입력 -->
-								<%@ include file="./create_equioment.jsp" %>
-								<div style="visibility: hidden;"><input  type="text" required="required" class="form-control" placeholder="넘기기" /></div>
+							<div class="col-xs-12">
+								<div class="col-md-12">
+									<h3>Step 2. 고객사 설치환경 입력</h3>
+										<!-- 고객장비 환경 & 설치 정보 입력 -->
+										<%@ include file="./equioment/equioment_list.jsp" %>
+										<div style="visibility: hidden;"><input  type="text" required="required" class="form-control" placeholder="넘기기" value="sss"/></div>
+										<!-- 입력완료 -->
+										<div class="row" style="padding-top: 10px; padding-bottom: 30px">
+											<button class="btn btn-primary nextBtn btn-lg pull-right" type="button">Next</button>
+										</div>
+									</div>
+								</div>
 							</div>
 							<div class="row setup-content" id="step-3">
-								<!-- 고객 요구사항 입력 -->
-								<%@ include file="./create_etl.jsp" %>
-								<div style="visibility: hidden;"><input  type="text" required="required" class="form-control" placeholder="넘기기" /></div>
+								<div class="col-xs-12">
+									<div class="col-md-12">
+										<h3>Step 3. 고객사 암호화컬럼 입력</h3>
+		
+										<!-- 고객 요구사항 입력 -->
+										<%@ include file="./etl/etl_list.jsp" %>
+										<div style="visibility: hidden;"><input  type="text" required="required" class="form-control" placeholder="넘기기" value="sss"/></div>
+										<!-- 입력완료 -->
+										<div class="row" style="padding-top: 10px; padding-bottom: 30px">
+											<button class="btn btn-primary nextBtn btn-lg pull-right" type="button">Next</button>
+										</div>
+									</div>
+								</div>
 							</div>
 							<div class="row setup-content" id="step-4">
-								<!-- 입력정보 확인 -->
-								<%@ include file="./create_customer_demands.jsp" %>
-								<div style="visibility: hidden;"><input  type="text" required="required" class="form-control" placeholder="넘기기" /></div>
+								<div class="col-xs-12">
+									<div class="col-md-12">
+										<h3>Step 4. 고객 요구사항 입력</h3>
+		
+										<!-- 입력정보 확인 -->
+										<%@ include file="./customer_demands/customer_demands_list.jsp" %>
+										<div style="visibility: hidden;"><input  type="text" required="required" class="form-control" placeholder="넘기기" value="sss"/></div>
+										<!-- 입력완료 -->
+										<div class="row" style="padding-top: 10px; padding-bottom: 30px">
+											<button class="btn btn-success btn-lg pull-right" type="submit">프로젝트 등록</button>
+										</div>
+									</div>
+								</div>
 							</div>
 						</form>
 						<!-- ./form end -->

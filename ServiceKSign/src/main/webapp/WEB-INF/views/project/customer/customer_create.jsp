@@ -1,18 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<div class="form-group">
-	<div class="col-md-1 "></div>
-	<div class="col-md-4">
-		<label class="control-label">기존고객</label> 
-		<input type="radio" required="required" class="old_customer" value="old_customer" /> 
-		<label class="control-label">신규고객</label>
-		<input type="radio" required="required" class="new_customer" value="new_customer" />
-	</div>
-	<div class="col-md-5"></div>
-	<div class="col-md-2">
-		<button class="btn btn-primary" type="button" onclick="">고객 검색</button>
-	</div>
-</div>
+
 <div class="form-group" style="padding-bottom: 30px"></div>
 <div class="form-group" style="padding-bottom: 30px">
 	<div class="col-md-2">

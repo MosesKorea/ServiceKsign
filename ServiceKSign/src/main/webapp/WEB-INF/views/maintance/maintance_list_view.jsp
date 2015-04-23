@@ -4,14 +4,14 @@
 <!-- top page include -->
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
+<link href="resources/css/maintance/maintance_list.css" rel="stylesheet">
 
-<link href="resources/css/project/project_list.css" rel="stylesheet">
 <div class="main">
 	<div class="main-inner">
 		<div class="container">
 		<div class="row">
 			
-			<%@ include file="project_left_list.jsp" %>
+			<%@ include file="maintance_left_list.jsp" %>
 
             <!-- /.col-md-3 왼쪽사이드 메뉴  end-->
 			<div class="col-md-1"></div>
@@ -38,7 +38,7 @@
 					<div class="row pedding"></div>
 					<!-- pedding ./row end -->
 
-					<%@ include file="./project_list_view.jsp" %>
+					<%@ include file="./mantance_list.jsp" %>	
 			</div>
 
 			</div>

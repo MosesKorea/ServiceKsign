@@ -29,11 +29,11 @@
 					<!-- pedding ./row end -->
 					
 					<!-- 설치환경 리스트 start -->
-					<%@ include file="./equioment_list.jsp" %>
+					<%@ include file="./equioment/equioment_list.jsp" %>
 					<!-- 설치환경 리스트 end -->
 					
 					<!-- 요구사항 리스트 start -->	
-					<%@ include file="./customer_demands_list.jsp" %>
+					<%@ include file="./customer_demands/customer_demands_list.jsp" %>
 					<!-- 요구사항 리스트 end -->
 					
 					<!-- 이슈 리스트 start -->
