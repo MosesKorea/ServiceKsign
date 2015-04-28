@@ -1,0 +1,7 @@
+.footer{
+  overflow: hidden;
+  clear: both;
+  position: relative;
+  border-top: 2px solid #3f3f3f;
+  bottom: 0;
+}
