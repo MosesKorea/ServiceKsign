@@ -1,33 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<!-- 
-<div class="row">
-	<div class="customer-info-div center-block">
-		<div class="col-xs-6 col-sm-3">사이트명 :</div>
-		<div class="col-xs-6 col-sm-3">특허청</div>
-		<div class="col-xs-6 col-sm-3">제품명 :</div>
-		<div class="col-xs-6 col-sm-3">EDMS</div>
-	</div>
-	<div class="customer-info-div center-block">
-		<div class="col-xs-6 col-sm-3">사이트명 :</div>
-		<div class="col-xs-6 col-sm-3">특허청</div>
-		<div class="col-xs-6 col-sm-3">제품명 :</div>
-		<div class="col-xs-6 col-sm-3">EDMS</div>
-	</div>
-	<div class="customer-info-div center-block">
-		<div class="col-xs-6 col-sm-3">사이트명 :</div>
-		<div class="col-xs-6 col-sm-3">특허청</div>
-		<div class="col-xs-6 col-sm-3">제품명 :</div>
-		<div class="col-xs-6 col-sm-3">EDMS</div>
-	</div>
-	<div class="customer-info-div center-block">
-		<div class="col-xs-6 col-sm-3">사이트명 :</div>
-		<div class="col-xs-6 col-sm-3">특허청</div>
-		<div class="col-xs-6 col-sm-3">제품명 :</div>
-		<div class="col-xs-6 col-sm-3">EDMS</div>
-	</div>
-</div>
- -->
 <div class="project_table1">
 	<div class="panel panel-default">
 		<!-- Default panel contents -->

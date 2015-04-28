@@ -18,6 +18,13 @@ public class ProjectListController {
 	public String projectlist(Model model) throws Exception{
 			
 			
-		return "project/project_list";
+		return "project/project_list_view";
+	}
+	
+	@RequestMapping(value = "/projectIssueUpdate", method = RequestMethod.GET)
+	public String projectIssueList(Model model) throws Exception{
+			
+			
+		return "project/project_issue_list_view";
 	}
 }

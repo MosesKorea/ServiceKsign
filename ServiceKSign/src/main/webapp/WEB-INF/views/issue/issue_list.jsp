@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+
+
 <div class="project_table1">
 	<div class="panel panel-default">
 		<!-- Default panel contents -->
@@ -9,7 +11,8 @@
 					<h2>이슈 목록</h2>
 				</div>
 				<div class="col-md-2" >
-					<button type="button" class="btn btn-primary create_issue">이슈 생성</button>
+					<a href="./issueCreate">
+					<button type="button" class="btn btn-primary create_issue" id="create_issue">이슈 생성</button></a>
 				</div>
 			</div>
 		</div>
@@ -47,6 +50,8 @@
 
 </div>
 <!-- .row 게시물 목록 리스트3 목록 end-->
+
+
 <!-- pagination paging_list start -->
 <div class="pagingDiv">
 	<ul class="pagination">

@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<div class="project_list">
+<div class="list">
 	<div class="panel panel-default">
 		<!-- Default panel contents -->
 		<div class="panel-heading">

@@ -108,14 +108,9 @@
 	      <ul class="mainnav">
 	        <li class="dropdown"> <a href="./projectList"><span class="glyphicon glyphicon-list-alt"></span><span>프로젝트</span><b class="caret"></b></a></li>
 	        <li class="dropdown"><a href="./maintanceList"><span class="glyphicon glyphicon-list-alt"></span><span>유지보수</span><b class="caret"></b></a></li>
-	        <li class="dropdown"> <a class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-list-alt"></span><span>고객정보</span></a><b class="caret"></b>
-	        	<ul class="dropdown-menu">
-							<li><a href="portfolio-1-col.html">고객정보 생성</a></li>
-							<li><a href="portfolio-1-col.html">고객정보 수정</a></li>
-				</ul>
-	        </li>
-	        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-list-alt"></span><span>재품관리</span><b class="caret"></b></a>
-                        <ul class="dropdown-menu">
+	        <li class="dropdown"> <a href="./customerList"><span class="glyphicon glyphicon-list-alt"></span><span>고객정보</span></a><b class="caret"></b></li>
+	        <li class="dropdown"><a href="./productList"><span class="glyphicon glyphicon-list-alt"></span><span>재품관리</span><b class="caret"></b></a>
+                        <!-- <ul class="dropdown-menu">
                             <li>
                                 <a href="portfolio-1-col.html">제품 등록</a>
                             </li>
@@ -125,9 +120,9 @@
                             <li>
                                 <a href="portfolio-1-col.html">제품 삭제</a>
                             </li>
-                        </ul></li>
-	        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-list-alt"></span><span>일정관리</span><span class="caret"></span></a>
-                        <ul class="dropdown-menu">
+                        </ul> --></li>
+	        <li class="dropdown"><a href="./weekList"><span class="glyphicon glyphicon-list-alt"></span><span>일정관리</span><span class="caret"></span></a>
+                        <!-- <ul class="dropdown-menu">
                             <li>
                                 <a href="blog-home-1.html">일정 생성</a>
                             </li>
@@ -139,7 +134,7 @@
                             </li>
                             <li>
                                 <a href="blog-home-2.html">이슈 수정</a>
-                            </li>
+                            </li> -->
                         </ul>
             </li>
 	      </ul>

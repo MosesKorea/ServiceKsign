@@ -4,25 +4,25 @@
   <div class="main-inner">
     <div class="container">
       <div class="row">
-			<div class="row">
-				<div class="col-xs-12 col-sm-6 col-md-6">
-					
+				<div class="row">
+					<div class="col-xs-12 col-sm-6 col-md-6">
+
 						<!-- 프로젝트 리스트  start-->
-						<%@ include file="./project/project_list_view.jsp" %>
+						<%@ include file="./project/project_list.jsp"%>
 						<!-- 프로젝트 리스트  end-->
-					
-					
-				</div>
-				<div class="col-xs-12 col-sm-6 col-md-6">
-				
-					
+
+
+					</div>
+					<div class="col-xs-12 col-sm-6 col-md-6">
+
+
 						<!-- /.widget-header -->
-						
-							<%@ include file="./issue/issue_list.jsp" %>
-						
+
+						<%@ include file="./issue/issue_list.jsp"%>
+
+					</div>
 				</div>
-			</div>
-			<!-- /.row -->
+				<!-- /.row -->
 			<div class="row">
 				<div class="col-xs-12 col-sm-6 col-md-6">
 					<%@ include file="./maintance/mantance_list.jsp" %>

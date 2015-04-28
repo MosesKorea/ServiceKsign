@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <div class="extra">
 
 	<div class="extra-inner">
@@ -6,42 +8,38 @@
 
 			<div class="row">
                     <div class="span3">
-                        <h4>About Free Admin Template</h4>
+                        <h4>프로젝트</h4>
                         <ul>
-                            <li><a href="javascript:;">EGrappler.com</a></li>
-                            <li><a href="javascript:;">Web Development Resources</a></li>
-                            <li><a href="javascript:;">Responsive HTML5 Portfolio Templates</a></li>
-                            <li><a href="javascript:;">Free Resources and Scripts</a></li>
+                            <li role="presentation"><a href="./projectCreate">프로젝트 생성</a></li>
+							<li role="presentation"><a href="./projectList">프로젝트 수정</a></li>
+							<li role="presentation"><a href="./projectIssueCreate">프로젝트 이슈 생성</a></li>
+							<li role="presentation"><a href="./projectIssueUpdate">프로젝트 이슈 수정</a></li>
                         </ul>
                     </div>
                     <!-- /span3 -->
                     <div class="span3">
-                        <h4>Support</h4>
+                        <h4>제품관리</h4>
                         <ul>
-                            <li><a href="javascript:;">Frequently Asked Questions</a></li>
-                            <li><a href="javascript:;">Ask a Question</a></li>
-                            <li><a href="javascript:;">Video Tutorial</a></li>
-                            <li><a href="javascript:;">Feedback</a></li>
+                            <li role="presentation"><a href="./productCreate">제품 생성</a></li>
+							<li role="presentation"><a href="./productList">제품 수정</a></li>
                         </ul>
                     </div>
                     <!-- /span3 -->
                     <div class="span3">
-                        <h4>Something Legal</h4>
+                        <h4>유지보수</h4>
                         <ul>
-                            <li><a href="javascript:;">Read License</a></li>
-                            <li><a href="javascript:;">Terms of Use</a></li>
-                            <li><a href="javascript:;">Privacy Policy</a></li>
-                            <li></li>
+                           <li role="presentation"><a href="./maintanceCreate">유지보수 생성</a></li>
+							<li role="presentation"><a href="./maintanceList">유지보수 수정</a></li>
+							<li role="presentation"><a href="./maintanceIssueCreate">유지보수 이슈 생성</a></li>
+							<li role="presentation"><a href="./maintanceIssueUpdate">유지보수 이슈 수정</a></li>
                         </ul>
                     </div>
                     <!-- /span3 -->
                     <div class="span3">
-                        <h4>Open Source jQuery Plugins</h4>
+                        <h4>이슈 관리</h4>
                         <ul>
-                            <li><a href="http://www.egrappler.com">Open Source jQuery Plugins</a></li>
-                            <li><a href="http://www.egrappler.com;">HTML5 Responsive Tempaltes</a></li>
-                            <li><a href="http://www.egrappler.com;">Free Contact Form Plugin</a></li>
-                            <li><a href="http://www.egrappler.com;">Flat UI PSD</a></li>
+                            <li role="presentation"><a href="./issueCreate">이슈 생성</a></li>
+							<li role="presentation"><a href="./issueUpdate">이슈 수정</a></li>
                         </ul>
                     </div>
                     <!-- /span3 -->
@@ -52,6 +50,7 @@
 	</div> <!-- /extra-inner -->
 
 </div>
+<link href="resources/css/main/footer.css" rel="stylesheet">
 <div class="footer">
 	 <div class="footer-inner">
 	 	<div class="container">
@@ -59,7 +58,7 @@
 			 	<div class="row">
 				  <div class="col-xs-6 col-sm-4"></div>
 				  <div class="col-xs-6 col-sm-4">
-						<a href="index" style="text-align: center; color: white;">Copyright © 2014 Ksign All rights reserved </a>
+						<a href="index" style="text-align: center; color: white;">Copyright ⓒ 2015 Ksign All rights reserved </a>
 				  </div>
 				  <div class="col-xs-6 col-sm-4"></div>
 				</div>

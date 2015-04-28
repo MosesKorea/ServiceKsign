@@ -18,8 +18,19 @@ public class ProjectCreateController {
 	 * return : Customer 
 	**/
 	@RequestMapping(value = "/projectCreate", method = RequestMethod.GET)
-	public String CreateCustomer(Model model) throws Exception{
+	public String CreateProject(Model model) throws Exception{
 		
 		return "/project/project_create";
+	}
+	
+	/**
+	 * Project Issue Create
+	 * 프로젝트 이슈 생성
+	 * return : Issue 
+	**/
+	@RequestMapping(value = "/projectIssueCreate", method = RequestMethod.GET)
+	public  String CreateIssue(Model model) throws Exception{
+		
+		return "/project/project_issue_create";
 	}
 }

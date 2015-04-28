@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class MaintanceViewController {
 
 	public MaintanceViewController() {
-		System.out.println("MaintanceViewController() 생성자###############################");
+		System.out.println("############################### MaintanceViewController() 생성자");
 	}
 	
 	

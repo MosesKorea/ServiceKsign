@@ -3,8 +3,7 @@
 <div class="form-group">
 	<div class="col-md-10 "></div>
 	<div class="col-md-2 ">
-		<button class="btn btn-primary" type="button" onclick="">암호화
-			컬럼 추가</button>
+		<button class="btn btn-primary" type="button" onclick="">암호화컬럼 추가</button>
 	</div>
 </div>
 <div class="form-group" style="padding-bottom: 30px">

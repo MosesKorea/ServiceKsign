@@ -2,7 +2,7 @@
 	pageEncoding="UTF-8"%>
 <div class="col-xs-12">
 	<div class="col-md-12">
-		<h3>Step 1. 고객사 정보 입력</h3>
+		<h3>Step 4. 고객사 요구정보 입력</h3>
 		<div class="form-group">
 			<div class="col-md-10 "></div>
 			<div class="col-md-2 ">

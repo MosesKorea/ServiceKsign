@@ -264,7 +264,9 @@ font-weight: bold !important;
 	
 	border-bottom: 1px solid #000;
 }
-
+.main-inner{
+	margin-bottom: 400px;
+}
 
 
 /*------------------------------------------------------------------
