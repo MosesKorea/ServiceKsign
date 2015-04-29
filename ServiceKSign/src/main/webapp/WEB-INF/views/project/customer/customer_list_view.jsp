@@ -37,8 +37,16 @@
 					<!-- ./input-group ./row end  -->
 					<div class="row pedding"></div>
 					<!-- pedding ./row end -->
+					<div class="list">
+						<div class="panel panel-default">
+							<!-- Default panel contents -->
+							<div class="panel-heading"><h3>Customer List</h3></div>
 
 					<%@ include file="./customer_list.jsp" %>
+					
+					</div>
+                </div>
+
 			</div>
 
 			</div>

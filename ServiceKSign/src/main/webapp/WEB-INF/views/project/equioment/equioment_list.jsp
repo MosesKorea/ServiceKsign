@@ -1,19 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<!-- 설치환경 리스트  start -->
-<div class="project_table1">
-	<div class="panel panel-default">
-		<!-- Default panel contents -->
-		<div class="panel-heading">
-			<div class="row">
-				<div class="col-md-10">
-					<h3>설치환경 정보</h3>
-				</div>
-				<div class="col-md-2">
-					<button type="button" class="btn btn-primary create_issue">설치 환경 추가</button>
-				</div>
-			</div>
-		</div>
+
 
 		<!-- 환경 설정 리스트 Table -->
 		<table class="table">
@@ -46,9 +33,7 @@
 				<%-- </c:forEach>  --%>
 			</tbody>
 		</table>
-	</div>
 
-</div>
 <!-- .row 설치환경 정보 게시물 목록 리스트1 목록 end-->
 
 <!-- pagination paging_list start -->

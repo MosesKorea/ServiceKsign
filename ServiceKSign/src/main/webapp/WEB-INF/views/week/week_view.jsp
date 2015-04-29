@@ -27,14 +27,14 @@
 											</div>
 											<div class="col-md-4">
 												<input type="text" required="required" class="form-control"
-													placeholder="site명" />
+													placeholder="site명" name="" value="새올"/>
 											</div>
 											<div class="col-md-2">
 												<label class="control-label">작성자</label>
 											</div>
 											<div class="col-md-4">
 												<input type="text" required="required" class="form-control"
-													placeholder="작성자" />
+													placeholder="작성자" name="" value="모세"/>
 											</div>
 										</div>
 										<div class="form-group" style="padding-bottom: 30px">
@@ -43,14 +43,14 @@
 											</div>
 											<div class="col-md-4">
 												<input type="text" required="required" class="form-control"
-													placeholder="2015.00.00" />
+													placeholder="2015.00.00" name="" value="2015.04.30"/>
 											</div>
 											<div class="col-md-2">
 												<label class="control-label">완료예정일</label>
 											</div>
 											<div class="col-md-4">
 												<input type="text" required="required" class="form-control"
-													placeholder="2015.00.00" />
+													placeholder="2015.00.00" name="" value="2015.04.30"/>
 											</div>
 										</div>
 										<div class="form-group" style="padding-bottom: 30px">
@@ -59,7 +59,7 @@
 											</div>
 											<div class="col-md-10">
 												<input type="text" required="required" class="form-control"
-													placeholder="업무내용" />
+													placeholder="업무내용" name="" value="테스트서버설치"/>
 											</div>
 										</div>
 										<div class="form-group" style="padding-bottom: 30px">
@@ -68,7 +68,7 @@
 											</div>
 											<div class="col-md-10">
 												<input type="text" required="required" class="form-control"
-													placeholder="비고" />
+													placeholder="비고" name="" value="업그레이드 예정 환경평가용"/>
 											</div>
 										</div>
 										<!-- 입력완료 -->

@@ -31,7 +31,7 @@
 				<%-- <c:forEach var="project" items="${projectList }"> --%>
 				<tr>
 					<td>1</td>
-					<td>시도새올</td>
+					<td><a href="./weekView">시도새올</a></td>
 					<td>테스트서버설치</td>
 					<td>2015.04.30</td>
 					<td>2015.04.30</td>

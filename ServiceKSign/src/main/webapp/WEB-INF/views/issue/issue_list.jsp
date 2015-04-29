@@ -2,20 +2,6 @@
 	pageEncoding="UTF-8"%>
 
 
-<div class="project_table1">
-	<div class="panel panel-default">
-		<!-- Default panel contents -->
-		<div class="panel-heading">
-			<div class="row">
-				<div class="col-md-10" >
-					<h2>이슈 목록</h2>
-				</div>
-				<div class="col-md-2" >
-					<a href="./issueCreate">
-					<button type="button" class="btn btn-primary create_issue" id="create_issue">이슈 생성</button></a>
-				</div>
-			</div>
-		</div>
 
 		<!-- Table -->
 		<table class="table">
@@ -34,7 +20,7 @@
 				<%-- <c:forEach var="project" items="${projectList }"> --%>
 				<tr>
 					<td>1</td>
-					<td>이슈처리</td>
+					<td><a href="./issueView">이슈처리</a></td>
 					<td>HW문제</td>
 					<td>HW 교체</td>
 					<td>2014.12.11</td>
@@ -44,11 +30,7 @@
 				<%-- </c:forEach>  --%>
 			</tbody>
 		</table>
-	</div>
 
-
-
-</div>
 <!-- .row 게시물 목록 리스트3 목록 end-->
 
 

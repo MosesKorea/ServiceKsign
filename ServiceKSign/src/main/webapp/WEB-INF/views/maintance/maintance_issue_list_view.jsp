@@ -37,8 +37,21 @@
 					<!-- ./input-group ./row end  -->
 					<div class="row pedding"></div>
 					<!-- pedding ./row end -->
-
-					<%@ include file="../issue/issue_list.jsp" %>
+					<div class="project_table1">
+						<div class="panel panel-default">
+						<!-- Default panel contents -->
+						<div class="panel-heading">
+							<div class="row">
+								<div class="col-md-10" >
+									<h2>유지보수 이슈 목록</h2>
+								</div>
+								<div class="col-md-2"></div>
+							</div>
+						</div>
+						<%@ include file="../issue/issue_list.jsp" %>
+						<!-- issue create end -->
+					</div>
+				</div>
 			</div>
 
 			</div>

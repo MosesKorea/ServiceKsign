@@ -1,18 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<div class="project_table1">
-	<div class="panel panel-default">
-		<!-- Default panel contents -->
-		<div class="panel-heading">
-			<div class="row">
-				<div class="col-md-10" >
-					<h3>요구사항</h3>
-				</div>
-				<div class="col-md-2" >
-					<button type="button" class="btn btn-primary create_issue">요구사항 추가</button>
-				</div>
-			</div>
-		</div>
+
 
 		<!-- Table -->
 		<table class="table">
@@ -43,7 +31,7 @@
 				<%-- </c:forEach>  --%>
 			</tbody>
 		</table>
-	</div>
+	
 	<!-- pagination paging_list start -->
 	<div class="pagingDiv">
 		<ul class="pagination">

@@ -17,7 +17,7 @@ public class MaintanceListController {
 		
 	@RequestMapping(value = "/maintanceIssueUpdate", method = RequestMethod.GET)
 	public String maintanceIssueList(Model model){
-		return "/maintance/maintance_issue_list_view";
+		return "maintance/maintance_issue_list_view";
 	}
 }
 	

@@ -22,6 +22,6 @@ public class MaintanceViewController {
 	public String maintanceList(Model model){
 		
 		
-		return "/maintance/maintance_list_view";
+		return "maintance/maintance_list_view";
 	}
 }

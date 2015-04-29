@@ -37,8 +37,26 @@
 					<!-- ./input-group ./row end  -->
 					<div class="row pedding"></div>
 					<!-- pedding ./row end -->
-
+					
+					
+					<div class="project_table1">
+						<div class="panel panel-default">
+						<!-- Default panel contents -->
+						<div class="panel-heading">
+							<div class="row">
+								<div class="col-md-10" >
+									<h2>이슈 목록</h2>
+								</div>
+								<div class="col-md-2" >
+									<a href="./issueCreate">
+									<button type="button" class="btn btn-primary create_issue" id="create_issue">이슈 생성</button></a>
+								</div>
+							</div>
+						</div>
+									
 					<%@ include file="./issue_list.jsp" %>
+						</div>
+					</div>
 			</div>
 
 			</div>

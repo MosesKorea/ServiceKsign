@@ -43,15 +43,33 @@
 									<div class="col-md-12">
 										<h3>Step 1. 고객사 정보 입력</h3>
 										<div class="form-group">
-											<div class="col-md-1 "></div>
-											<div class="col-md-4">
-												<label class="control-label">기존고객</label> <input type="radio"
+											
+											<div class="col-md-7">
+											<div class="row">
+											  <div class="col-md-6">
+											    <div class="input-group">
+											      <span class="input-group-addon">
+											        <input type="radio" onchange="newInput()">
+											      </span>
+											      <input type="text" class="form-control" name="new_customer" placeholder="기존고객" value="">
+											    </div><!-- /input-group -->
+											  </div><!-- /.col-lg-6 -->
+											  <div class="col-md-6">
+											    <div class="input-group">
+											      <span class="input-group-addon">
+											        <input type="radio" onchange="oldInput()">
+											      </span>
+											      <input type="text" class="form-control" name="old_customer" placeholder="신규고객" value="">
+												    </div><!-- /input-group -->
+											  </div><!-- /.col-lg-6 -->
+											</div><!-- /.row -->
+												<!-- <label class="control-label">기존고객</label> <input type="radio"
 													required="required" class="old_customer"
 													placeholder="Enter First Name" /> <label class="control-label">신규고객</label>
 												<input type="radio" required="required" class="new_customer"
-													placeholder="Enter First Name" />
+													placeholder="Enter First Name" /> -->
 											</div>
-											<div class="col-md-5"><a style="visibility: hidden;"><input type="text" value="작성"></a></div>
+											<div class="col-md-3"><a style="visibility: hidden;"><input type="text" value="작성"></a></div>
 											<div class="col-md-2">
 												<button class="btn btn-primary" type="button" onclick="">고객 검색</button>
 											</div>

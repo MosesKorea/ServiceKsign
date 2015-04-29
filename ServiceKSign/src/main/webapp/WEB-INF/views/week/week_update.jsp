@@ -13,7 +13,7 @@
 			<div class="col-md-1"></div>
 			<div class="col-md-9">
 					<div class="panel panel-default">
-					<div class="panel-heading"><h2>주간업무 수정</h2></div>
+					<div class="panel-heading"><h2>주간업무 제목</h2></div>
 						<!-- Default panel contents -->
 						<div class="row" style="padding-bottom: 50pt">
 						<form role="form">
@@ -27,14 +27,14 @@
 											</div>
 											<div class="col-md-4">
 												<input type="text" required="required" class="form-control"
-													placeholder="site명" />
+													placeholder="site명" name="" value=""/>
 											</div>
 											<div class="col-md-2">
 												<label class="control-label">작성자</label>
 											</div>
 											<div class="col-md-4">
 												<input type="text" required="required" class="form-control"
-													placeholder="작성자" />
+													placeholder="작성자" name="" value=""/>
 											</div>
 										</div>
 										<div class="form-group" style="padding-bottom: 30px">
@@ -43,14 +43,14 @@
 											</div>
 											<div class="col-md-4">
 												<input type="text" required="required" class="form-control"
-													placeholder="2015.00.00" />
+													placeholder="2015.00.00" name="" value=""/>
 											</div>
 											<div class="col-md-2">
 												<label class="control-label">완료예정일</label>
 											</div>
 											<div class="col-md-4">
 												<input type="text" required="required" class="form-control"
-													placeholder="2015.00.00" />
+													placeholder="2015.00.00" name="" value=""/>
 											</div>
 										</div>
 										<div class="form-group" style="padding-bottom: 30px">
@@ -59,7 +59,7 @@
 											</div>
 											<div class="col-md-10">
 												<input type="text" required="required" class="form-control"
-													placeholder="업무내용" />
+													placeholder="업무내용" name="" value=""/>
 											</div>
 										</div>
 										<div class="form-group" style="padding-bottom: 30px">
@@ -68,12 +68,12 @@
 											</div>
 											<div class="col-md-10">
 												<input type="text" required="required" class="form-control"
-													placeholder="비고" />
+													placeholder="비고" name="" value=""/>
 											</div>
 										</div>
 										<!-- 입력완료 -->
 										<div class="row" style="padding-top: 10px; padding-bottom: 30px">
-											<button class="btn btn-success btn-lg pull-right" type="submit">정보수정</button>
+											<button class="btn btn-success btn-lg pull-right" type="submit">등록</button>
 										</div>
 									</div>
 								</div>
@@ -94,5 +94,5 @@
 	<!-- ./main-inner end -->
 </div>
 <!-- ./main end -->
-<script type="text/javascript" src="resources/js/project/project_create.js"></script>
+
 <%@ include file="../template/footer.jsp" %>

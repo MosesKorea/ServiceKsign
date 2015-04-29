@@ -17,13 +17,13 @@ public class MaintanceCreatetController {
 	@RequestMapping(value = "/maintanceCreate", method = RequestMethod.GET)
 	public String maintanceCreatet(Model model) throws Exception{
 		
-		return "/maintance/maintance_create";
+		return "maintance/maintance_create";
 	}
 	
 	@RequestMapping(value = "/maintanceIssueCreate", method = RequestMethod.GET)
 	public String maintanceIssueCreatet(Model model) throws Exception{
 		
-		return "/maintance/maintance_issue_create";
+		return "maintance/maintance_issue_create";
 	}
 	
 }

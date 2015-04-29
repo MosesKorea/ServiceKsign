@@ -21,50 +21,58 @@
 				<div class="panel panel-default">
 					<div class="panel-heading"><h2>유지보수 정보</h2></div>
 					<div class="row" style="padding-top: 10px">
-					<div class="col-md-7"></div>
-				    <!-- 게시물 검색 -->
-					<div class="col-md-4 input-group">
-						<input type="text" class="form-control content" id="searchcontent" placeholder="프로젝트명">
-						<div class="input-group-btn">
-							<button type="button" id="searchB" 
-							class="btn btn-default dropdown-toggle"
-							onclick="searching()">
-								검색
-							</button>
+						<div class="col-md-7"></div>
+					    <!-- 게시물 검색 -->
+						<div class="col-md-4 input-group">
+							<input type="text" class="form-control content" id="searchcontent" placeholder="프로젝트명">
+							<div class="input-group-btn">
+								<button type="button" id="searchB" 
+								class="btn btn-default dropdown-toggle"
+								onclick="searching()">
+									검색
+								</button>
+							</div>
+							<!-- /btn-group -->
 						</div>
-						<!-- /btn-group -->
-					</div>
-					<!-- ./input-group 프로젝트 검색_end -->
+						<!-- ./input-group 프로젝트 검색_end -->
 					</div>
 					<div class="project_info" style="padding-top: 10px">
 					<!-- 프로젝트 정보 표시 start -->
-					<div class="panel panel-default">
-					
+						<div class="panel panel-default">
+						<div class="list">
+							<div class="panel panel-default">
+								<!-- Default panel contents -->
+								<div class="panel-heading"><h3>Customer</h3></div>
+	
+								<%@ include file="../project/customer/customer_list.jsp" %>
 						
-						<table class="table">
-							<tr>
-								<td>유지보수 사이트명 : </td>
-								<td>시도새올</td>
-							</tr>
-							<tr>
-								<td>OS명 : </td>
-								<td>AIX</td>
-							</tr>
-							<tr>
-								<td>DB명 : </td>
-								<td>ORACLE</td>
-							</tr>
-							<tr>
-								<td>고객사 : </td>
-								<td>시도새올유지관리사업단</td>
-							</tr>
-						</table>
-					
+							</div>
+		                </div>
+		                
+		                <!-- 설치환경 리스트  start -->
+						<div class="project_table1">
+							<div class="panel panel-default">
+								<!-- Default panel contents -->
+								<div class="panel-heading">
+									<div class="row">
+										<div class="col-md-10">
+											<h3>설치환경 정보</h3>
+										</div>
+										<div class="col-md-2">
+											<!-- <button type="button" class="btn btn-primary create_issue">설치 환경 추가</button> -->
+										</div>
+									</div>
+								</div>
+						<%@ include file="../project/equioment/equioment_list.jsp" %>
+							</div>
+						</div>
 					</div>
+					<!-- 프로젝트 정보 표시 end -->
+						</div>
 					</div>
 					<!-- ./input-group ./row end  -->
-					<!-- 프로젝트 정보 표시 end -->
-					</div>
+				
+					
 					
 					<!-- pedding ./row start -->
 					<div class="row pedding"></div>
@@ -82,8 +90,9 @@
 							</div>
 						</div>
 					</div>
+					<!-- ./row end -->
+					
 				</div>
-				<!-- ./row end -->
 
 			
 			</div>

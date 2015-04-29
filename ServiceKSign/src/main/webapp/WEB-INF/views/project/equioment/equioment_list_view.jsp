@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ include file="../template/top.jsp" %>
+<%@ include file="../../template/top.jsp" %>
 <!-- top page include -->
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
@@ -11,14 +11,14 @@
 		<div class="container">
 		<div class="row">
 			
-			<%@ include file="./project_left_list.jsp" %>
+			<%@ include file="./equioment_left_list.jsp" %>
 
             <!-- /.col-md-3 왼쪽사이드 메뉴  end-->
 			<div class="col-md-1"></div>
 			<div class="col-md-9">
 				<div class="row">
 					<div class="row">
-					<div class="col-md-4"></div>
+					<div class="col-md-4"><button type="button" class="btn btn-primary create_issue">고객 요구사항 등록</button></div>
 					<div class="col-md-4"></div>
 				    <!-- 게시물 검색 -->
 					<div class="col-md-4 input-group">
@@ -37,25 +37,31 @@
 					<!-- ./input-group ./row end  -->
 					<div class="row pedding"></div>
 					<!-- pedding ./row end -->
-
+					<div class="list">
+					
+					<!-- 설치환경 리스트  start -->
 					<div class="project_table1">
 						<div class="panel panel-default">
-						<!-- Default panel contents -->
-						<div class="panel-heading">
-							<div class="row">
-								<div class="col-md-10" >
-									<h2>프로젝트 이슈 목록</h2>
-								</div>
-								<div class="col-md-2" >
-									<a href="./issueCreate">
-									<button type="button" class="btn btn-primary create_issue" id="create_issue">이슈 생성</button></a>
+							<!-- Default panel contents -->
+							<div class="panel-heading">
+								<div class="row">
+									<div class="col-md-10">
+										<h3>설치환경 정보</h3>
+									</div>
+									<div class="col-md-2">
+										<button type="button" class="btn btn-primary create_issue">설치 환경 추가</button>
+									</div>
 								</div>
 							</div>
+					<%@ include file="./equioment_list.jsp" %>
 						</div>
-									
-							<%@ include file="../issue/issue_list.jsp" %>
-						</div>
+
 					</div>
+					
+					
+					
+                </div>
+
 			</div>
 
 			</div>
@@ -69,4 +75,4 @@
 </div>
 <!-- main -->
 
-<%@ include file="../template/footer.jsp" %> 
+<%@ include file="../../template/footer.jsp" %> 

@@ -28,16 +28,68 @@
 					<div class="row pedding"></div>
 					<!-- pedding ./row end -->
 					
-					<!-- 설치환경 리스트 start -->
+					
+					<!-- 설치환경 리스트  start -->
+					<div class="row">
+					<div class="project_table1">
+						<div class="panel panel-default">
+							<!-- Default panel contents -->
+							<div class="panel-heading">
+								<div class="row">
+									<div class="col-md-10">
+										<h3>설치환경 정보</h3>
+									</div>
+									<div class="col-md-2">
+										<button type="button" class="btn btn-primary create_issue">설치 환경 추가</button>
+									</div>
+								</div>
+							</div>
 					<%@ include file="./equioment/equioment_list.jsp" %>
+						</div>
+					</div>
+					</div>
 					<!-- 설치환경 리스트 end -->
 					
-					<!-- 요구사항 리스트 start -->	
+					<!-- 요구사항 리스트 start -->
+					<div class="row">
+					<div class="project_table1">
+						<div class="panel panel-default">
+						<!-- Default panel contents -->
+						<div class="panel-heading">
+							<div class="row">
+								<div class="col-md-10" >
+									<h3>요구사항</h3>
+								</div>
+								<div class="col-md-2" >
+									<button type="button" class="btn btn-primary create_issue">요구사항 추가</button>
+								</div>
+							</div>
+						</div>
 					<%@ include file="./customer_demands/customer_demands_list.jsp" %>
+						</div>
+					</div>
+					</div>	
 					<!-- 요구사항 리스트 end -->
 					
 					<!-- 이슈 리스트 start -->
+					<div class="row">
+					<div class="project_table1">
+						<div class="panel panel-default">
+							<!-- Default panel contents -->
+							<div class="panel-heading">
+								<div class="row">
+									<div class="col-md-10" >
+										<h3>암호화 컬럼 리스트</h3>
+									</div>
+									<div class="col-md-2" >
+										<button type="button" class="btn btn-primary create_issue">암호화 컬럼 추가</button>
+									</div>
+								</div>
+							</div>
 					<%@ include file="../issue/issue_list.jsp" %>
+						</div>
+					</div>
+					</div>
 					<!-- 이슈 리스트 end -->
 			</div>
 

@@ -26,8 +26,8 @@
 						<div class="input-group-btn">
 							<button type="button" id="searchB" 
 							class="btn btn-default dropdown-toggle"
-							onclick="searching()">
-								검색
+							onclick="serching()">
+								이슈검색
 							</button>
 						</div>
 						<!-- /btn-group -->
@@ -37,9 +37,22 @@
 					<!-- ./input-group ./row end  -->
 					<div class="row pedding"></div>
 					<!-- pedding ./row end -->
-
-					<%@ include file="../issue/issue_list.jsp" %>
-			</div>
+					
+					<div class="project_table1">
+						<div class="panel panel-default">
+						<!-- Default panel contents -->
+						<div class="panel-heading">
+							<div class="row">
+								<div class="col-md-10" >
+									<h2>비상주프로젝트 이슈 목록</h2>
+								</div>
+								<div class="col-md-2"></div>
+							</div>
+						</div>
+						<%@ include file="../issue/issue_list.jsp" %>
+						<!-- issue create end -->
+					</div>
+				</div>
 
 			</div>
 			<!-- ./col-md-9 project_list end -->	
@@ -51,5 +64,13 @@
 	<!-- main-inner end -->
 </div>
 <!-- main -->
+<script type="text/javascript">
 
+$(Document).ready(
+		function create(){
+			$(Location).attr('href','/weekIssueCreate');
+		}
+		
+		);
+</script>
 <%@ include file="../template/footer.jsp" %> 

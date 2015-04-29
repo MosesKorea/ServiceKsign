@@ -6,10 +6,10 @@
 		<div class="panel-heading">
 			<div class="row">
 				<div class="col-md-10" >
-					<h2>제품 목록</h2>
+					<h2>Product 목록</h2>
 				</div>
 				<div class="col-md-2" >
-					<button type="button" class="btn btn-primary create_issue">제품 등록</button>
+					<button type="button" class="btn btn-primary create_issue">Product 등록</button>
 				</div>
 			</div>
 		</div>
@@ -19,8 +19,8 @@
 			<thead>
 				<tr>
 					<td>NO</td>
-					<td>제품분류</td>
-					<td>제품명</td>
+					<td>Product분류</td>
+					<td>Product명</td>
 					<td>버전</td>
 					<td>등록일</td>
 				</tr>
@@ -29,7 +29,7 @@
 				<%-- <c:forEach var="project" items="${projectList }"> --%>
 				<tr>
 					<td>1</td>
-					<td>Server</td>
+					<td><a href="./productView">Server</a></td>
 					<td>SDBServer.jar</td>
 					<td>1.5.0.0.1</td>
 					<td>2014.12.11</td>

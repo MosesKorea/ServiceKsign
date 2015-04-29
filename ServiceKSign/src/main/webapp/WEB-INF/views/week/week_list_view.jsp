@@ -36,7 +36,7 @@
 					</div>
 					<!-- ./input-group ./row end  -->
 					<div class="row pedding"></div>
-					<!-- pedding ./row end -->
+					<!-- pedding ./ end -->
 
 					<%@ include file="./week_list.jsp" %>
 			</div>

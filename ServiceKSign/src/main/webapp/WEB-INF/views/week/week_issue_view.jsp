@@ -6,37 +6,41 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 
 <link href="resources/css/project/project_list.css" rel="stylesheet">
+<script src="resources/js/jquery-1.11.0.js"></script>
+
 <div class="main">
 	<div class="main-inner">
 		<div class="container">
 		<div class="row">
 			
-			<%@ include file="issue_left_list.jsp" %>
+			<%@ include file="week_left_list.jsp" %>
 
             <!-- /.col-md-3 왼쪽사이드 메뉴  end-->
 			<div class="col-md-1"></div>
-				<div class="col-md-9">
-					<div class="row">
-				<h1>이슈생성</h1>
+			<div class="col-md-9">
+				<div class="row">
+				<h3>이슈 제목</h3>
 				<div class="panel panel-default">
-					<div class="panel-heading"><h2>유지보수 정보</h2></div>
+					<div class="panel-heading"><h2>프로젝트 정보</h2></div>
 					<div class="row" style="padding-top: 10px">
-						<div class="col-md-7"></div>
-					    <!-- 게시물 검색 -->
-						<div class="col-md-4 input-group">
-							<input type="text" class="form-control content" id="searchcontent" placeholder="프로젝트명">
-							<div class="input-group-btn">
-								<button type="button" id="searchB" 
-								class="btn btn-default dropdown-toggle"
-								onclick="searching()">
-									검색
-								</button>
-							</div>
-							<!-- /btn-group -->
+					<div class="col-md-7"></div>
+				    <!-- 게시물 검색 -->
+					<div class="col-md-4 input-group">
+						<input type="text" class="form-control content" id="searchcontent" placeholder="프로젝트명">
+						<div class="input-group-btn">
+							<button type="button" id="searchB" 
+							class="btn btn-default dropdown-toggle"
+							onclick="searching()">
+								검색
+							</button>
 						</div>
-						<!-- ./input-group 프로젝트 검색_end -->
+						<!-- /btn-group -->
+					</div>
+					<!-- ./input-group 프로젝트 검색_end -->
 					</div>
 					<div class="project_info" style="padding-top: 10px">
+					
+					
 					<!-- 프로젝트 정보 표시 start -->
 						<div class="panel panel-default">
 						<div class="list">
@@ -66,13 +70,12 @@
 						<%@ include file="../project/equioment/equioment_list.jsp" %>
 							</div>
 						</div>
-					</div>
-					<!-- 프로젝트 정보 표시 end -->
 						</div>
+						<!-- 프로젝트 정보 표시 end -->
 					</div>
 					<!-- ./input-group ./row end  -->
-				
-					
+					<!-- 프로젝트 정보 표시 end -->
+					</div>
 					
 					<!-- pedding ./row start -->
 					<div class="row pedding"></div>
@@ -81,7 +84,7 @@
 					<div class="panel panel-default">
 						<div class="panel-heading"><h2>이슈정보 입력</h2></div>
 						<!-- issue create start -->
-						<%@ include file="../issue/issue_create.jsp" %>
+						<%@ include file="../issue/issue_view.jsp" %>
 						<!-- issue create end -->
 						<div class="form-group" style="padding-bottom: 50pt">
 							<div class="col-md-2"></div>
@@ -90,12 +93,12 @@
 							</div>
 						</div>
 					</div>
-					<!-- ./row end -->
-					
 				</div>
+				<!-- ./row end -->
 
-				</div>
-				<!-- ./col-md-9 project_list end -->	
+			
+			</div>
+			<!-- ./col-md-9 project_list end -->	
 			</div>
 			<!--./row end  -->
 		</div>

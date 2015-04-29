@@ -1,9 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<div class="list">
-						<div class="panel panel-default">
-							<!-- Default panel contents -->
-							<div class="panel-heading"><h3>Customer List</h3></div>
 
 							<!-- Table -->
 							<table class="table">
@@ -38,11 +34,7 @@
 							<%-- </c:forEach>  --%>
 								</tbody>
 							</table>
-						</div>
-
-
-					
-                </div>
+						
 				<!-- .row 게시물 목록 리스트 목록 end-->
 				<!-- pagination paging_list start -->
 				<div class="pagingDiv">

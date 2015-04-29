@@ -13,12 +13,23 @@ public class WeekreportCreateController {
 	
 	/**
 	 * week Create
-	 * 일정 리스트
+	 * 주간일정 리스트
 	 *  
 	**/
 	@RequestMapping(value = "/weekCreate", method = RequestMethod.GET)
 	public String customerListView(Model model)
 	{
-		return "/week/week_create";
+		return "week/week_create";
+	}
+	
+	/**
+	 * week Issue Create
+	 * 비상주프로젝트 일정 이슈 생성
+	 *  
+	**/
+	@RequestMapping(value = "/weekIssueCreate", method = RequestMethod.GET)
+	public String customerIssueListView(Model model)
+	{
+		return "week/week_issue_create";
 	}
 }
