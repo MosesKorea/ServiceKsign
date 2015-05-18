@@ -2,265 +2,299 @@ package com.ksign.service.prescaning;
 
 public class Equipment {
 	/**
+	 * 장비환경 정보 테이블
+	 * create table equipment (
+		 * eNO NUMBER(10) , 
+		 * eTYPE VARCHAR2(50) , 
+		 * eBUSINESS VARCHAR2(200) , 
+		 * eDBCOUNT NUMBER(10) , 
+		 * eOS VARCHAR2(200) , 
+		 * eHOSTNAME VARCHAR2(200) , 
+		 * eIP VARCHAR2(100) , 
+		 * ePORT NUMBER(20) , 
+		 * eSID VARCHAR2(20) , 
+		 * eOSID VARCHAR2(50) , 
+		 * eOSPW VARCHAR2(50) , 
+		 * eDBID VARCHAR2(50) ,  
+		 * eDBPW VARCHAR2(50) , 
+		 * eSERVER VARCHAR2(200) , 
+		 * eFILTER VARCHAR2(200) , 
+		 * eENCRYPTOR VARCHAR2(100) , 
+		 * eINSTALLPATH VARCHAR2(1000) , 
+		 * eAOOLICATIONMETHOD VARCHAR2(1000) ,  
+		 * eDETAILS VARCHAR2(1000) , 
+		 * eOTHER VARCHAR2(1000) , 
+		 * e_P_NO NUMBER(10) , 
+		 * e_FILE VARCHAR2(20)   
+	 * );
+	 */
+	
+	/**
 	 * 장비정보넘버	NUMBER
 	 */
-	private int e_no;	
+	private int eNO;	
 	/**
 	 * 장비타입	VARCHAR2
 	 */
-	private String e_type;	
+	private String eTYPE;	
 	/**
 	 * 업무명	VARCHAR2
 	 */
-	private String e_business;	
+	private String eBUSINESS;	
 	/**
-	 * DB수량	NUMBER
+	 * DB수량	eDBCOUNT
 	 */
-	private  int e_Dbcount;	
+	private  int eDBCOUNT;	
 	/**
 	 * OS	VARCHAR2
 	 */
-	private String e_os;	
+	private String eOS;	
 	/**
 	 * HOSTNAME	VARCHAR2
 	 */
-	private String e_hostname;	
+	private String eHOSTNAME;	
 	/**
 	 * IP	VARCHAR2
 	 */
-	private String e_ip;	
+	private String eIP;	
 	/**
 	 * PORT	NUMBER
 	 */
-	private int e_port;	
+	private int ePORT;	
 	/**
 	 * SID	VARCHAR2
 	 */
-	private String e_sid;	
+	private String eSID;	
 	/**
 	 * OS ID	VARCHAR2
 	 */
-	private String e_osid;	
+	private String eOSID;	
 	/**
 	 * OS PW	VARCHAR2
 	 */
-	private String e_ospw;	
+	private String eOSPW;	
 	/**
 	 * DB ID	VARCHAR2
 	 */
-	private String e_dbid;	
+	private String eDBID;	
 	/**
 	 * DB PW	VARCHAR2
 	 */
-	private String e_dbpw;	
+	private String eDBPW;	
 	/**
-	 * SERVER버전	VARCHAR2
+	 * 설치SERVER버전	VARCHAR2
 	 */
-	private String e_server;	
+	private String eSERVER;	
 	/**
-	 * FILTER버전	VARCHAR2
+	 * 설치FILTER버전	VARCHAR2
 	 */
-	private String e_filter;	
+	private String eFILTER;	
 	/**
-	 * 코어버전	VARCHAR2
+	 * 설치코어버전	VARCHAR2
 	 */
-	private String e_encryptor;	
+	private String eENCRYPTOR;	
 	/**
 	 * 설치경로	VARCHAR2
 	 */
-	private String e_installpath;	
+	private String eINSTALLPATH;	
 	/**
-	 * 적용방식	VARCHAR2
+	 * 암호화적용방식	VARCHAR2
 	 */
-	private String e_applicationmethod;	
+	private String eAOOLICATIONMETHOD;	
 	/**
 	 * 세부사항	VARCHAR2
 	 */
-	private String e_details;	
+	private String eDETAILS;	
 	/**
 	 * 기타	VARCHAR2
 	 */
-	private String e_other;	
+	private String eOTHER;	
 	/**
 	 * 고객넘버	VARCHAR2
 	 */
-	private String e_custom_no;
-	
-	
-	public Equipment(int e_no, String e_type, String e_business, int e_Dbcount,
-			String e_os, String e_hostname, String e_ip, int e_port,
-			String e_sid, String e_osid, String e_ospw, String e_dbid,
-			String e_dbpw, String e_server, String e_filter,
-			String e_encryptor, String e_installpath,
-			String e_applicationmethod, String e_details, String e_other,
-			String e_custom_no) {
+	private String e_P_NO;
+	/**
+	 * 첨부파일명
+	 * @return filename
+	 */
+	private String e_FILE;
+
+	public Equipment(int eNO, String eTYPE, String eBUSINESS, int eDBCOUNT,
+			String eOS, String eHOSTNAME, String eIP, int ePORT, String eSID,
+			String eOSID, String eOSPW, String eDBID, String eDBPW,
+			String eSERVER, String eFILTER, String eENCRYPTOR,
+			String eINSTALLPATH, String eAOOLICATIONMETHOD, String eDETAILS,
+			String eOTHER, String e_P_NO, String e_FILE) {
 		super();
-		this.e_no = e_no;
-		this.e_type = e_type;
-		this.e_business = e_business;
-		this.e_Dbcount = e_Dbcount;
-		this.e_os = e_os;
-		this.e_hostname = e_hostname;
-		this.e_ip = e_ip;
-		this.e_port = e_port;
-		this.e_sid = e_sid;
-		this.e_osid = e_osid;
-		this.e_ospw = e_ospw;
-		this.e_dbid = e_dbid;
-		this.e_dbpw = e_dbpw;
-		this.e_server = e_server;
-		this.e_filter = e_filter;
-		this.e_encryptor = e_encryptor;
-		this.e_installpath = e_installpath;
-		this.e_applicationmethod = e_applicationmethod;
-		this.e_details = e_details;
-		this.e_other = e_other;
-		this.e_custom_no = e_custom_no;
+		this.eNO = eNO;
+		this.eTYPE = eTYPE;
+		this.eBUSINESS = eBUSINESS;
+		this.eDBCOUNT = eDBCOUNT;
+		this.eOS = eOS;
+		this.eHOSTNAME = eHOSTNAME;
+		this.eIP = eIP;
+		this.ePORT = ePORT;
+		this.eSID = eSID;
+		this.eOSID = eOSID;
+		this.eOSPW = eOSPW;
+		this.eDBID = eDBID;
+		this.eDBPW = eDBPW;
+		this.eSERVER = eSERVER;
+		this.eFILTER = eFILTER;
+		this.eENCRYPTOR = eENCRYPTOR;
+		this.eINSTALLPATH = eINSTALLPATH;
+		this.eAOOLICATIONMETHOD = eAOOLICATIONMETHOD;
+		this.eDETAILS = eDETAILS;
+		this.eOTHER = eOTHER;
+		this.e_P_NO = e_P_NO;
+		this.e_FILE = e_FILE;
 	}
-	
-	public int getE_no() {
-		return e_no;
+
+	public int geteNO() {
+		return eNO;
 	}
-	public void setE_no(int e_no) {
-		this.e_no = e_no;
+	public void seteNO(int eNO) {
+		this.eNO = eNO;
 	}
-	public String getE_type() {
-		return e_type;
+	public String geteTYPE() {
+		return eTYPE;
 	}
-	public void setE_type(String e_type) {
-		this.e_type = e_type;
+	public void seteTYPE(String eTYPE) {
+		this.eTYPE = eTYPE;
 	}
-	public String getE_business() {
-		return e_business;
+	public String geteBUSINESS() {
+		return eBUSINESS;
 	}
-	public void setE_business(String e_business) {
-		this.e_business = e_business;
+	public void seteBUSINESS(String eBUSINESS) {
+		this.eBUSINESS = eBUSINESS;
 	}
-	public int getE_Dbcount() {
-		return e_Dbcount;
+	public int geteDBCOUNT() {
+		return eDBCOUNT;
 	}
-	public void setE_Dbcount(int e_Dbcount) {
-		this.e_Dbcount = e_Dbcount;
+	public void seteDBCOUNT(int eDBCOUNT) {
+		this.eDBCOUNT = eDBCOUNT;
 	}
-	public String getE_os() {
-		return e_os;
+	public String geteOS() {
+		return eOS;
 	}
-	public void setE_os(String e_os) {
-		this.e_os = e_os;
+	public void seteOS(String eOS) {
+		this.eOS = eOS;
 	}
-	public String getE_hostname() {
-		return e_hostname;
+	public String geteHOSTNAME() {
+		return eHOSTNAME;
 	}
-	public void setE_hostname(String e_hostname) {
-		this.e_hostname = e_hostname;
+	public void seteHOSTNAME(String eHOSTNAME) {
+		this.eHOSTNAME = eHOSTNAME;
 	}
-	public String getE_ip() {
-		return e_ip;
+	public String geteIP() {
+		return eIP;
 	}
-	public void setE_ip(String e_ip) {
-		this.e_ip = e_ip;
+	public void seteIP(String eIP) {
+		this.eIP = eIP;
 	}
-	public int getE_port() {
-		return e_port;
+	public int getePORT() {
+		return ePORT;
 	}
-	public void setE_port(int e_port) {
-		this.e_port = e_port;
+	public void setePORT(int ePORT) {
+		this.ePORT = ePORT;
 	}
-	public String getE_sid() {
-		return e_sid;
+	public String geteSID() {
+		return eSID;
 	}
-	public void setE_sid(String e_sid) {
-		this.e_sid = e_sid;
+	public void seteSID(String eSID) {
+		this.eSID = eSID;
 	}
-	public String getE_osid() {
-		return e_osid;
+	public String geteOSID() {
+		return eOSID;
 	}
-	public void setE_osid(String e_osid) {
-		this.e_osid = e_osid;
+	public void seteOSID(String eOSID) {
+		this.eOSID = eOSID;
 	}
-	public String getE_ospw() {
-		return e_ospw;
+	public String geteOSPW() {
+		return eOSPW;
 	}
-	public void setE_ospw(String e_ospw) {
-		this.e_ospw = e_ospw;
+	public void seteOSPW(String eOSPW) {
+		this.eOSPW = eOSPW;
 	}
-	public String getE_dbid() {
-		return e_dbid;
+	public String geteDBID() {
+		return eDBID;
 	}
-	public void setE_dbid(String e_dbid) {
-		this.e_dbid = e_dbid;
+	public void seteDBID(String eDBID) {
+		this.eDBID = eDBID;
 	}
-	public String getE_dbpw() {
-		return e_dbpw;
+	public String geteDBPW() {
+		return eDBPW;
 	}
-	public void setE_dbpw(String e_dbpw) {
-		this.e_dbpw = e_dbpw;
+	public void seteDBPW(String eDBPW) {
+		this.eDBPW = eDBPW;
 	}
-	public String getE_server() {
-		return e_server;
+	public String geteSERVER() {
+		return eSERVER;
 	}
-	public void setE_server(String e_server) {
-		this.e_server = e_server;
+	public void seteSERVER(String eSERVER) {
+		this.eSERVER = eSERVER;
 	}
-	public String getE_filter() {
-		return e_filter;
+	public String geteFILTER() {
+		return eFILTER;
 	}
-	public void setE_filter(String e_filter) {
-		this.e_filter = e_filter;
+	public void seteFILTER(String eFILTER) {
+		this.eFILTER = eFILTER;
 	}
-	public String getE_encryptor() {
-		return e_encryptor;
+	public String geteENCRYPTOR() {
+		return eENCRYPTOR;
 	}
-	public void setE_encryptor(String e_encryptor) {
-		this.e_encryptor = e_encryptor;
+	public void seteENCRYPTOR(String eENCRYPTOR) {
+		this.eENCRYPTOR = eENCRYPTOR;
 	}
-	public String getE_installpath() {
-		return e_installpath;
+	public String geteINSTALLPATH() {
+		return eINSTALLPATH;
 	}
-	public void setE_installpath(String e_installpath) {
-		this.e_installpath = e_installpath;
+	public void seteINSTALLPATH(String eINSTALLPATH) {
+		this.eINSTALLPATH = eINSTALLPATH;
 	}
-	public String getE_applicationmethod() {
-		return e_applicationmethod;
+	public String geteAOOLICATIONMETHOD() {
+		return eAOOLICATIONMETHOD;
 	}
-	public void setE_applicationmethod(String e_applicationmethod) {
-		this.e_applicationmethod = e_applicationmethod;
+	public void seteAOOLICATIONMETHOD(String eAOOLICATIONMETHOD) {
+		this.eAOOLICATIONMETHOD = eAOOLICATIONMETHOD;
 	}
-	public String getE_details() {
-		return e_details;
+	public String geteDETAILS() {
+		return eDETAILS;
 	}
-	public void setE_details(String e_details) {
-		this.e_details = e_details;
+	public void seteDETAILS(String eDETAILS) {
+		this.eDETAILS = eDETAILS;
 	}
-	public String getE_other() {
-		return e_other;
+	public String geteOTHER() {
+		return eOTHER;
 	}
-	public void setE_other(String e_other) {
-		this.e_other = e_other;
+	public void seteOTHER(String eOTHER) {
+		this.eOTHER = eOTHER;
 	}
-	public String getE_custom_no() {
-		return e_custom_no;
+	public String getE_P_NO() {
+		return e_P_NO;
 	}
-	public void setE_custom_no(String e_custom_no) {
-		this.e_custom_no = e_custom_no;
+	public void setE_P_NO(String e_P_NO) {
+		this.e_P_NO = e_P_NO;
 	}
-	
+	public String getE_FILE() {
+		return e_FILE;
+	}
+	public void setE_FILE(String e_FILE) {
+		this.e_FILE = e_FILE;
+	}
 	
 	@Override
 	public String toString() {
-		return "Equipment [e_no=" + e_no + ", e_type=" + e_type
-				+ ", e_business=" + e_business + ", e_Dbcount=" + e_Dbcount
-				+ ", e_os=" + e_os + ", e_hostname=" + e_hostname + ", e_ip="
-				+ e_ip + ", e_port=" + e_port + ", e_sid=" + e_sid
-				+ ", e_osid=" + e_osid + ", e_ospw=" + e_ospw + ", e_dbid="
-				+ e_dbid + ", e_dbpw=" + e_dbpw + ", e_server=" + e_server
-				+ ", e_filter=" + e_filter + ", e_encryptor=" + e_encryptor
-				+ ", e_installpath=" + e_installpath + ", e_applicationmethod="
-				+ e_applicationmethod + ", e_details=" + e_details
-				+ ", e_other=" + e_other + ", e_custom_no=" + e_custom_no + "]";
-	}	
-	
-	
-	
+		return "Equipment [eNO=" + eNO + ", eTYPE=" + eTYPE + ", eBUSINESS="
+				+ eBUSINESS + ", eDBCOUNT=" + eDBCOUNT + ", eOS=" + eOS
+				+ ", eHOSTNAME=" + eHOSTNAME + ", eIP=" + eIP + ", ePORT="
+				+ ePORT + ", eSID=" + eSID + ", eOSID=" + eOSID + ", eOSPW="
+				+ eOSPW + ", eDBID=" + eDBID + ", eDBPW=" + eDBPW
+				+ ", eSERVER=" + eSERVER + ", eFILTER=" + eFILTER
+				+ ", eENCRYPTOR=" + eENCRYPTOR + ", eINSTALLPATH="
+				+ eINSTALLPATH + ", eAOOLICATIONMETHOD=" + eAOOLICATIONMETHOD
+				+ ", eDETAILS=" + eDETAILS + ", eOTHER=" + eOTHER + ", e_P_NO="
+				+ e_P_NO + ", e_FILE=" + e_FILE + "]";
+	}
 
 }

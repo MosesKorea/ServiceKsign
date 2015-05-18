@@ -29,4 +29,10 @@ public interface EquipmentService {
 	 * @throws Exception
 	 */
 	public abstract boolean deleteEquipment(int e_no) throws Exception;
+	/**
+	 * 장비정보 All 가져오기
+	 * @return 장비리스트
+	 * @throws Exception
+	 */
+	public abstract boolean selectAllEquipment() throws Exception;
 }

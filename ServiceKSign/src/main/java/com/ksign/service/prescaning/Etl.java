@@ -1,357 +1,339 @@
 package com.ksign.service.prescaning;
 
 public class Etl {
-	/**
-	 * 암호화대상 넘버	NUMBER
-	 */
-	private int etl_no;	
-	/**
-	 * 서비스 명	VARCHAR2
-	 */
-	private String etl_service;	
-	/**
-	 * 스키마명	VARCHAR2
-	 */
-	private String etl_schema;	
-	/**
-	 * 테이블명	VARCHAR2
-	 */
-	private String etl_table;	
-	/**
-	 * 테이블설명	VARCHAR2
-	 */
-	private String etl_table_info;	
-	/**
-	 * 건수	NUMBER
-	 */
-	private int etl_count;	
-	/**
-	 * 컬럼	VARCHAR2
-	 */
-	private String etl_calumn;	
-	/**
-	 * 컬럼설명	VARCHAR2
-	 */
-	private String etl_calumn_info;	
-	/**
-	 * 타입	VARCHAR2
-	 */
-	private String etl_type;	
-	/**
-	 * 길이	NUMBER
-	 */
-	private int etl_length;	
-	/**
-	 * PK	VARCHAR2
-	 */
-	private String etl_pk;	
-	/**
-	 * FK	VARCHAR2
-	 */
-	private String etl_FK;	
-	/**
-	 * 비고	VARCHAR2
-	 */
-	private String etl_orther;	
-	/**
-	 * 정책	VARCHAR2
-	 */
-	private String etl_policy;	
-	/**
-	 * 트리거 유무	VARCHAR2
-	 */
-	private String etl_trigger;	
-	/**
-	 * 뷰 유무	VARCHAR2
-	 */
-	private String etlL_mview;	
-	/**
-	 * 기암호화	VARCHAR2
-	 */
-	private String etl_h_encrypt;	
-	/**
-	 * 복수함수	VARCHAR2
-	 */
-	private String etl_pfuntion;	
-	/**
-	 * 구분컬럼	VARCHAR2
-	 */
-	private String etl_devisioncalumn;	
-	/**
-	 * SELECT	VARCHAR2
-	 */
-	private String etl_select;	
-	/**
-	 * FROM	VARCHAR2
-	 */
-	private String etl_from;	
-	/**
-	 * WHERE	VARCHAR2
-	 */
-	private String etl_where;	
-	/**
-	 * HINT	VARCHAR2
-	 */
-	private String etl_hint;	
-	/**
-	 * 고객넘버	NUMBER
-	 */
-	private int etl_customer_no;
 	
-	public Etl(int etl_no, String etl_service, String etl_schema,
-			String etl_table, String etl_table_info, int etl_count,
-			String etl_calumn, String etl_calumn_info, String etl_type,
-			int etl_length, String etl_pk, String etl_FK, String etl_orther,
-			String etl_policy, String etl_trigger, String etlL_mview,
-			String etl_h_encrypt, String etl_pfuntion,
-			String etl_devisioncalumn, String etl_select, String etl_from,
-			String etl_where, String etl_hint, int etl_customer_no) {
+	/**
+	 * 암호화 컬럼 정보 테이블
+	 * create table etl (
+			 * ETLNO NUMBER(10) , 
+			 * ETLSERVICE VARCHAR2(50) , 
+			 * ETLSCHEMA VARCHAR2(50) , 
+			 * ETLTABLE VARCHAR2(50) , 
+			 * ETLTABLEINFO VARCHAR2(1000) , 
+			 * ETLCOUNT NUMBER(100) , 
+			 * ETLCALUMN VARCHAR2(50) , 
+			 * ETLCALUMNINFO VARCHAR2(1000) , 
+			 * ETLTYPE VARCHAR2(50) , 
+			 * ETLLENGTH NUMBER(100) , 
+			 * ETLPK VARCHAR2(50) , 
+			 * ETLFK VARCHAR2(50) ,  
+			 * ETLOTHER VARCHAR2(1000) , 
+			 * ETLPOLICY VARCHAR2(50) , 
+			 * ETLTRIGGER VARCHAR2(50) , 
+			 * ETLMVIEW VARCHAR2(50) , 
+			 * ETLHENCRYPT VARCHAR2(50) , 
+			 * ETLPFUNCTION VARCHAR2(50) ,  
+			 * ETLDEVISIONCALUMN VARCHAR2(50) , 
+			 * ETLSELECT VARCHAR2(50) , 
+			 * ETLFROM VARCHAR2(50) , 
+			 * ETLWHERE VARCHAR2(50) , 
+			 * ETLHINT VARCHAR2(50) , 
+			 * ETL_P_FILE NUMBER(10) ,
+			 * ETL_FILE VARCHAR2(20)
+		);
+	 */
+	/**
+	 * 암호화대상 넘버
+	 */
+	private int ETLNO; 
+	/**
+	 * 서비스 명
+	 */
+	private String ETLSERVICE;
+	/**
+	 * 테이블명
+	 */
+	private String ETLSCHEMA; 
+	/**
+	 * 스키마명
+	 */
+	private String ETLTABLE; 
+	/**
+	 * 테이블설명
+	 */
+	private String ETLTABLEINFO; 
+	/**
+	 * 건수
+	 */
+	private int ETLCOUNT; 
+	/**
+	 * 컬럼
+	 */
+	private String ETLCALUMN; 
+	/**
+	 * 컬럼설명
+	 */
+	private String ETLCALUMNINFO; 
+	/**
+	 * 타입
+	 */
+	private String ETLTYPE ; 
+	/**
+	 * 길이
+	 */
+	private int ETLLENGTH ; 
+	/**
+	 * PK
+	 */
+	private String ETLPK ; 
+	/**
+	 * FK
+	 */
+	private String ETLFK ;  
+	/**
+	 * 비고
+	 */
+	private String ETLOTHER ; 
+	/**
+	 * 정책
+	 */
+	private String ETLPOLICY ; 
+	/**
+	 * 트리거 유무
+	 */
+	private String ETLTRIGGER ; 
+	/**
+	 * 뷰 유무
+	 */
+	private String ETLMVIEW ; 
+	/**
+	 * 기암호화
+	 */
+	private String ETLHENCRYPT ; 
+	/**
+	 * 복수함수
+	 */
+	private String ETLPFUNCTION ;  
+	/**
+	 * 구분컬럼
+	 */
+	private String ETLDEVISIONCALUMN ; 
+	/**
+	 * SELECT
+	 */
+	private String ETLSELECT ; 
+	/**
+	 * FROM
+	 */
+	private String ETLFROM ; 
+	/**
+	 * WHERE
+	 */
+	private String ETLWHERE ; 
+	/**
+	 * HINT
+	 */
+	private String ETLHINT ; 
+	/**
+	 * 해당프로벡트넘버
+	 */
+	private int ETL_P_FILE ;
+	/**
+	 * 첨부파일1
+	 */
+	private String ETL_FILE ;
+	
+	public Etl(int eTLNO, String eTLSERVICE, String eTLSCHEMA, String eTLTABLE,
+			String eTLTABLEINFO, int eTLCOUNT, String eTLCALUMN,
+			String eTLCALUMNINFO, String eTLTYPE, int eTLLENGTH, String eTLPK,
+			String eTLFK, String eTLOTHER, String eTLPOLICY, String eTLTRIGGER,
+			String eTLMVIEW, String eTLHENCRYPT, String eTLPFUNCTION,
+			String eTLDEVISIONCALUMN, String eTLSELECT, String eTLFROM,
+			String eTLWHERE, String eTLHINT, int eTL_P_FILE, String eTL_FILE) {
 		super();
-		this.etl_no = etl_no;
-		this.etl_service = etl_service;
-		this.etl_schema = etl_schema;
-		this.etl_table = etl_table;
-		this.etl_table_info = etl_table_info;
-		this.etl_count = etl_count;
-		this.etl_calumn = etl_calumn;
-		this.etl_calumn_info = etl_calumn_info;
-		this.etl_type = etl_type;
-		this.etl_length = etl_length;
-		this.etl_pk = etl_pk;
-		this.etl_FK = etl_FK;
-		this.etl_orther = etl_orther;
-		this.etl_policy = etl_policy;
-		this.etl_trigger = etl_trigger;
-		this.etlL_mview = etlL_mview;
-		this.etl_h_encrypt = etl_h_encrypt;
-		this.etl_pfuntion = etl_pfuntion;
-		this.etl_devisioncalumn = etl_devisioncalumn;
-		this.etl_select = etl_select;
-		this.etl_from = etl_from;
-		this.etl_where = etl_where;
-		this.etl_hint = etl_hint;
-		this.etl_customer_no = etl_customer_no;
+		ETLNO = eTLNO;
+		ETLSERVICE = eTLSERVICE;
+		ETLSCHEMA = eTLSCHEMA;
+		ETLTABLE = eTLTABLE;
+		ETLTABLEINFO = eTLTABLEINFO;
+		ETLCOUNT = eTLCOUNT;
+		ETLCALUMN = eTLCALUMN;
+		ETLCALUMNINFO = eTLCALUMNINFO;
+		ETLTYPE = eTLTYPE;
+		ETLLENGTH = eTLLENGTH;
+		ETLPK = eTLPK;
+		ETLFK = eTLFK;
+		ETLOTHER = eTLOTHER;
+		ETLPOLICY = eTLPOLICY;
+		ETLTRIGGER = eTLTRIGGER;
+		ETLMVIEW = eTLMVIEW;
+		ETLHENCRYPT = eTLHENCRYPT;
+		ETLPFUNCTION = eTLPFUNCTION;
+		ETLDEVISIONCALUMN = eTLDEVISIONCALUMN;
+		ETLSELECT = eTLSELECT;
+		ETLFROM = eTLFROM;
+		ETLWHERE = eTLWHERE;
+		ETLHINT = eTLHINT;
+		ETL_P_FILE = eTL_P_FILE;
+		ETL_FILE = eTL_FILE;
 	}
 
-	public Etl() {
-		super();
+	public int getETLNO() {
+		return ETLNO;
 	}
-
-	public int getEtl_no() {
-		return etl_no;
+	public void setETLNO(int eTLNO) {
+		ETLNO = eTLNO;
 	}
-
-	public void setEtl_no(int etl_no) {
-		this.etl_no = etl_no;
+	public String getETLSERVICE() {
+		return ETLSERVICE;
 	}
-
-	public String getEtl_service() {
-		return etl_service;
+	public void setETLSERVICE(String eTLSERVICE) {
+		ETLSERVICE = eTLSERVICE;
 	}
-
-	public void setEtl_service(String etl_service) {
-		this.etl_service = etl_service;
+	public String getETLSCHEMA() {
+		return ETLSCHEMA;
 	}
-
-	public String getEtl_schema() {
-		return etl_schema;
+	public void setETLSCHEMA(String eTLSCHEMA) {
+		ETLSCHEMA = eTLSCHEMA;
 	}
-
-	public void setEtl_schema(String etl_schema) {
-		this.etl_schema = etl_schema;
+	public String getETLTABLE() {
+		return ETLTABLE;
 	}
-
-	public String getEtl_table() {
-		return etl_table;
+	public void setETLTABLE(String eTLTABLE) {
+		ETLTABLE = eTLTABLE;
 	}
-
-	public void setEtl_table(String etl_table) {
-		this.etl_table = etl_table;
+	public String getETLTABLEINFO() {
+		return ETLTABLEINFO;
 	}
-
-	public String getEtl_table_info() {
-		return etl_table_info;
+	public void setETLTABLEINFO(String eTLTABLEINFO) {
+		ETLTABLEINFO = eTLTABLEINFO;
 	}
-
-	public void setEtl_table_info(String etl_table_info) {
-		this.etl_table_info = etl_table_info;
+	public int getETLCOUNT() {
+		return ETLCOUNT;
 	}
-
-	public int getEtl_count() {
-		return etl_count;
+	public void setETLCOUNT(int eTLCOUNT) {
+		ETLCOUNT = eTLCOUNT;
 	}
-
-	public void setEtl_count(int etl_count) {
-		this.etl_count = etl_count;
+	public String getETLCALUMN() {
+		return ETLCALUMN;
 	}
-
-	public String getEtl_calumn() {
-		return etl_calumn;
+	public void setETLCALUMN(String eTLCALUMN) {
+		ETLCALUMN = eTLCALUMN;
 	}
-
-	public void setEtl_calumn(String etl_calumn) {
-		this.etl_calumn = etl_calumn;
+	public String getETLCALUMNINFO() {
+		return ETLCALUMNINFO;
 	}
-
-	public String getEtl_calumn_info() {
-		return etl_calumn_info;
+	public void setETLCALUMNINFO(String eTLCALUMNINFO) {
+		ETLCALUMNINFO = eTLCALUMNINFO;
 	}
-
-	public void setEtl_calumn_info(String etl_calumn_info) {
-		this.etl_calumn_info = etl_calumn_info;
+	public String getETLTYPE() {
+		return ETLTYPE;
 	}
-
-	public String getEtl_type() {
-		return etl_type;
+	public void setETLTYPE(String eTLTYPE) {
+		ETLTYPE = eTLTYPE;
 	}
-
-	public void setEtl_type(String etl_type) {
-		this.etl_type = etl_type;
+	public int getETLLENGTH() {
+		return ETLLENGTH;
 	}
-
-	public int getEtl_length() {
-		return etl_length;
+	public void setETLLENGTH(int eTLLENGTH) {
+		ETLLENGTH = eTLLENGTH;
 	}
-
-	public void setEtl_length(int etl_length) {
-		this.etl_length = etl_length;
+	public String getETLPK() {
+		return ETLPK;
 	}
-
-	public String getEtl_pk() {
-		return etl_pk;
+	public void setETLPK(String eTLPK) {
+		ETLPK = eTLPK;
 	}
-
-	public void setEtl_pk(String etl_pk) {
-		this.etl_pk = etl_pk;
+	public String getETLFK() {
+		return ETLFK;
 	}
-
-	public String getEtl_FK() {
-		return etl_FK;
+	public void setETLFK(String eTLFK) {
+		ETLFK = eTLFK;
 	}
-
-	public void setEtl_FK(String etl_FK) {
-		this.etl_FK = etl_FK;
+	public String getETLOTHER() {
+		return ETLOTHER;
 	}
-
-	public String getEtl_orther() {
-		return etl_orther;
+	public void setETLOTHER(String eTLOTHER) {
+		ETLOTHER = eTLOTHER;
 	}
-
-	public void setEtl_orther(String etl_orther) {
-		this.etl_orther = etl_orther;
+	public String getETLPOLICY() {
+		return ETLPOLICY;
 	}
-
-	public String getEtl_policy() {
-		return etl_policy;
+	public void setETLPOLICY(String eTLPOLICY) {
+		ETLPOLICY = eTLPOLICY;
 	}
-
-	public void setEtl_policy(String etl_policy) {
-		this.etl_policy = etl_policy;
+	public String getETLTRIGGER() {
+		return ETLTRIGGER;
 	}
-
-	public String getEtl_trigger() {
-		return etl_trigger;
+	public void setETLTRIGGER(String eTLTRIGGER) {
+		ETLTRIGGER = eTLTRIGGER;
 	}
-
-	public void setEtl_trigger(String etl_trigger) {
-		this.etl_trigger = etl_trigger;
+	public String getETLMVIEW() {
+		return ETLMVIEW;
 	}
-
-	public String getEtlL_mview() {
-		return etlL_mview;
+	public void setETLMVIEW(String eTLMVIEW) {
+		ETLMVIEW = eTLMVIEW;
 	}
-
-	public void setEtlL_mview(String etlL_mview) {
-		this.etlL_mview = etlL_mview;
+	public String getETLHENCRYPT() {
+		return ETLHENCRYPT;
 	}
-
-	public String getEtl_h_encrypt() {
-		return etl_h_encrypt;
+	public void setETLHENCRYPT(String eTLHENCRYPT) {
+		ETLHENCRYPT = eTLHENCRYPT;
 	}
-
-	public void setEtl_h_encrypt(String etl_h_encrypt) {
-		this.etl_h_encrypt = etl_h_encrypt;
+	public String getETLPFUNCTION() {
+		return ETLPFUNCTION;
 	}
-
-	public String getEtl_pfuntion() {
-		return etl_pfuntion;
+	public void setETLPFUNCTION(String eTLPFUNCTION) {
+		ETLPFUNCTION = eTLPFUNCTION;
 	}
-
-	public void setEtl_pfuntion(String etl_pfuntion) {
-		this.etl_pfuntion = etl_pfuntion;
+	public String getETLDEVISIONCALUMN() {
+		return ETLDEVISIONCALUMN;
 	}
-
-	public String getEtl_devisioncalumn() {
-		return etl_devisioncalumn;
+	public void setETLDEVISIONCALUMN(String eTLDEVISIONCALUMN) {
+		ETLDEVISIONCALUMN = eTLDEVISIONCALUMN;
 	}
-
-	public void setEtl_devisioncalumn(String etl_devisioncalumn) {
-		this.etl_devisioncalumn = etl_devisioncalumn;
+	public String getETLSELECT() {
+		return ETLSELECT;
 	}
-
-	public String getEtl_select() {
-		return etl_select;
+	public void setETLSELECT(String eTLSELECT) {
+		ETLSELECT = eTLSELECT;
 	}
-
-	public void setEtl_select(String etl_select) {
-		this.etl_select = etl_select;
+	public String getETLFROM() {
+		return ETLFROM;
 	}
-
-	public String getEtl_from() {
-		return etl_from;
+	public void setETLFROM(String eTLFROM) {
+		ETLFROM = eTLFROM;
 	}
-
-	public void setEtl_from(String etl_from) {
-		this.etl_from = etl_from;
+	public String getETLWHERE() {
+		return ETLWHERE;
 	}
-
-	public String getEtl_where() {
-		return etl_where;
+	public void setETLWHERE(String eTLWHERE) {
+		ETLWHERE = eTLWHERE;
 	}
-
-	public void setEtl_where(String etl_where) {
-		this.etl_where = etl_where;
+	public String getETLHINT() {
+		return ETLHINT;
 	}
-
-	public String getEtl_hint() {
-		return etl_hint;
+	public void setETLHINT(String eTLHINT) {
+		ETLHINT = eTLHINT;
 	}
-
-	public void setEtl_hint(String etl_hint) {
-		this.etl_hint = etl_hint;
+	public int getETL_P_FILE() {
+		return ETL_P_FILE;
 	}
-
-	public int getEtl_customer_no() {
-		return etl_customer_no;
+	public void setETL_P_FILE(int eTL_P_FILE) {
+		ETL_P_FILE = eTL_P_FILE;
 	}
-
-	public void setEtl_customer_no(int etl_customer_no) {
-		this.etl_customer_no = etl_customer_no;
+	public String getETL_FILE() {
+		return ETL_FILE;
 	}
-
+	public void setETL_FILE(String eTL_FILE) {
+		ETL_FILE = eTL_FILE;
+	}
+	
 	@Override
 	public String toString() {
-		return "Etl [etl_no=" + etl_no + ", etl_service=" + etl_service
-				+ ", etl_schema=" + etl_schema + ", etl_table=" + etl_table
-				+ ", etl_table_info=" + etl_table_info + ", etl_count="
-				+ etl_count + ", etl_calumn=" + etl_calumn
-				+ ", etl_calumn_info=" + etl_calumn_info + ", etl_type="
-				+ etl_type + ", etl_length=" + etl_length + ", etl_pk="
-				+ etl_pk + ", etl_FK=" + etl_FK + ", etl_orther=" + etl_orther
-				+ ", etl_policy=" + etl_policy + ", etl_trigger=" + etl_trigger
-				+ ", etlL_mview=" + etlL_mview + ", etl_h_encrypt="
-				+ etl_h_encrypt + ", etl_pfuntion=" + etl_pfuntion
-				+ ", etl_devisioncalumn=" + etl_devisioncalumn
-				+ ", etl_select=" + etl_select + ", etl_from=" + etl_from
-				+ ", etl_where=" + etl_where + ", etl_hint=" + etl_hint
-				+ ", etl_customer_no=" + etl_customer_no + "]";
+		return "Etl [ETLNO=" + ETLNO + ", ETLSERVICE=" + ETLSERVICE
+				+ ", ETLSCHEMA=" + ETLSCHEMA + ", ETLTABLE=" + ETLTABLE
+				+ ", ETLTABLEINFO=" + ETLTABLEINFO + ", ETLCOUNT=" + ETLCOUNT
+				+ ", ETLCALUMN=" + ETLCALUMN + ", ETLCALUMNINFO="
+				+ ETLCALUMNINFO + ", ETLTYPE=" + ETLTYPE + ", ETLLENGTH="
+				+ ETLLENGTH + ", ETLPK=" + ETLPK + ", ETLFK=" + ETLFK
+				+ ", ETLOTHER=" + ETLOTHER + ", ETLPOLICY=" + ETLPOLICY
+				+ ", ETLTRIGGER=" + ETLTRIGGER + ", ETLMVIEW=" + ETLMVIEW
+				+ ", ETLHENCRYPT=" + ETLHENCRYPT + ", ETLPFUNCTION="
+				+ ETLPFUNCTION + ", ETLDEVISIONCALUMN=" + ETLDEVISIONCALUMN
+				+ ", ETLSELECT=" + ETLSELECT + ", ETLFROM=" + ETLFROM
+				+ ", ETLWHERE=" + ETLWHERE + ", ETLHINT=" + ETLHINT
+				+ ", ETL_P_FILE=" + ETL_P_FILE + ", ETL_FILE=" + ETL_FILE + "]";
 	}
-	
-	
-	
-	
-	
-	
-
 
 }

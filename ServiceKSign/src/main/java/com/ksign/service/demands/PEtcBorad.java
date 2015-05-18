@@ -1,6 +1,6 @@
 package com.ksign.service.demands;
 
-public class Demands_list {
+public class PEtcBorad {
 	
 	/**
 	 * 요구사항 넘버	NUMBER
@@ -46,7 +46,7 @@ public class Demands_list {
 	 *  정의서 넘버	NUMBER
 	 */
 	private int demands_no;
-	public Demands_list(int de_no, String de_type, String de_name,
+	public PEtcBorad(int de_no, String de_type, String de_name,
 			String de_procese, String de_class, char de_status, char de_level,
 			String de_accommodation, String de_provenance, String de_note,
 			int demands_no) {

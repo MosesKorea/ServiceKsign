@@ -29,7 +29,7 @@ public class ProjectDaoImpl implements ProjectDao{
 	}
 
 	@Override
-	public List<Project> selectProject() throws Exception {
+	public List<Project> selectAllProject() throws Exception {
 		// TODO Auto-generated method stub
 		return null;
 	}

@@ -24,15 +24,21 @@ public class EquipmentServiceImpl implements EquipmentService{
 	}
 
 	@Override
-	public Equipment readEquipment(int e_no) throws Exception {
+	public Equipment readEquipment(int eNO) throws Exception {
 		// TODO Auto-generated method stub
-		return equipmentDao.readEquipment(e_no);
+		return equipmentDao.readEquipment(eNO);
 	}
 
 	@Override
-	public boolean deleteEquipment(int e_no) throws Exception {
+	public boolean deleteEquipment(int eNO) throws Exception {
 		// TODO Auto-generated method stub
-		return equipmentDao.deleteEquipment(e_no);
+		return equipmentDao.deleteEquipment(eNO);
+	}
+
+	@Override
+	public boolean selectAllEquipment() throws Exception {
+		// TODO Auto-generated method stub
+		return false;
 	}
 
 }

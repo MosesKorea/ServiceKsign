@@ -4,130 +4,182 @@ import java.sql.Date;
 
 public class Issue {
 	/**
-	 * 이슈 넘버	NUMBER
+	 * create table ISSUE_LIST (
+			 * ISNO NUMBER(10) , 
+			 * IS_P_NO NUMBER(10) , 
+			 * ISTYPE VARCHAR2(50) , 
+			 * ISCONTENT VARCHAR2(1000) , 
+			 * ISPROBLEM VARCHAR2(5000) , 
+			 * ISSOLUTION VARCHAR2(5000) , 
+			 * ISWRITER VARCHAR2(20) , 
+			 * ISDATE SYSDATE() , 
+			 * ISCOMPLETIONDATE SYSDATE() , 
+			 * ISNOTE VARCHAR2(1000) , 
+			 * ISCOMFAIL VARCHAR2(2) , 
+			 * ISSTATE NUMBER(3),
+			 * IS_FILE VARCHAR2(20)
+	 * );
 	 */
-	private int is_no;
 	/**
-	 * 대상넘버	NUMBER
+	 * 이슈 넘버
 	 */
-	private int project_no;	
+	private int ISNO; 
 	/**
-	 * 내용	VARCHAR2
+	 * 대상넘버
 	 */
-	private String is_content;
+	private int IS_P_NO; 
 	/**
-	 * 문제점	VARCHAR2
+	 * 이슈구분
 	 */
-	private String is_problem;
+	private String ISTYPE; 
 	/**
-	 * 방안	VARCHAR2
+	 * 내용
 	 */
-	private String is_solution;
+	private String ISCONTENT; 
 	/**
-	 * 최종발견일	SYSDATE
+	 * 문제점
 	 */
-	private Date is_date;
+	private String ISPROBLEM; 
 	/**
-	 * 완료예정일	SYSDATE
+	 * 방안
 	 */
-	private String is_completion;
+	private String ISSOLUTION; 
 	/**
-	 * 비고	VARCHAR2
+	 * 담당엔지니어
 	 */
-	private String is_note;
+	private String ISWRITER; 
 	/**
-	 * 완료/비완료	VARCHAR2
+	 * 최종발견일
 	 */
-	private String is_com_fail;
+	private Date ISDATE; 
 	/**
-	 * 상태	NUMBER
+	 * 완료예정일
 	 */
-	private int is_state;
-	public Issue(int is_no, int project_no, String is_content,
-			String is_problem, String is_solution, Date is_date,
-			String is_completion, String is_note, String is_com_fail,
-			int is_state) {
+	private Date ISCOMPLETIONDATE; 
+	/**
+	 * 비고
+	 */
+	private String ISNOTE; 
+	/**
+	 * 완료/비완료
+	 */
+	private String ISCOMFAIL; 
+	/**
+	 * 상태
+	 */
+	private int ISSTATE;
+	/**
+	 * 첨부파일1
+	 */
+	private String IS_FILE;
+	public Issue(int iSNO, int iS_P_NO, String iSTYPE, String iSCONTENT,
+			String iSPROBLEM, String iSSOLUTION, String iSWRITER, Date iSDATE,
+			Date iSCOMPLETIONDATE, String iSNOTE, String iSCOMFAIL,
+			int iSSTATE, String iS_FILE) {
 		super();
-		this.is_no = is_no;
-		this.project_no = project_no;
-		this.is_content = is_content;
-		this.is_problem = is_problem;
-		this.is_solution = is_solution;
-		this.is_date = is_date;
-		this.is_completion = is_completion;
-		this.is_note = is_note;
-		this.is_com_fail = is_com_fail;
-		this.is_state = is_state;
+		ISNO = iSNO;
+		IS_P_NO = iS_P_NO;
+		ISTYPE = iSTYPE;
+		ISCONTENT = iSCONTENT;
+		ISPROBLEM = iSPROBLEM;
+		ISSOLUTION = iSSOLUTION;
+		ISWRITER = iSWRITER;
+		ISDATE = iSDATE;
+		ISCOMPLETIONDATE = iSCOMPLETIONDATE;
+		ISNOTE = iSNOTE;
+		ISCOMFAIL = iSCOMFAIL;
+		ISSTATE = iSSTATE;
+		IS_FILE = iS_FILE;
 	}
-	public int getIs_no() {
-		return is_no;
+	public int getISNO() {
+		return ISNO;
 	}
-	public void setIs_no(int is_no) {
-		this.is_no = is_no;
+	public void setISNO(int iSNO) {
+		ISNO = iSNO;
 	}
-	public int getProject_no() {
-		return project_no;
+	public int getIS_P_NO() {
+		return IS_P_NO;
 	}
-	public void setProject_no(int project_no) {
-		this.project_no = project_no;
+	public void setIS_P_NO(int iS_P_NO) {
+		IS_P_NO = iS_P_NO;
 	}
-	public String getIs_content() {
-		return is_content;
+	public String getISTYPE() {
+		return ISTYPE;
 	}
-	public void setIs_content(String is_content) {
-		this.is_content = is_content;
+	public void setISTYPE(String iSTYPE) {
+		ISTYPE = iSTYPE;
 	}
-	public String getIs_problem() {
-		return is_problem;
+	public String getISCONTENT() {
+		return ISCONTENT;
 	}
-	public void setIs_problem(String is_problem) {
-		this.is_problem = is_problem;
+	public void setISCONTENT(String iSCONTENT) {
+		ISCONTENT = iSCONTENT;
 	}
-	public String getIs_solution() {
-		return is_solution;
+	public String getISPROBLEM() {
+		return ISPROBLEM;
 	}
-	public void setIs_solution(String is_solution) {
-		this.is_solution = is_solution;
+	public void setISPROBLEM(String iSPROBLEM) {
+		ISPROBLEM = iSPROBLEM;
 	}
-	public Date getIs_date() {
-		return is_date;
+	public String getISSOLUTION() {
+		return ISSOLUTION;
 	}
-	public void setIs_date(Date is_date) {
-		this.is_date = is_date;
+	public void setISSOLUTION(String iSSOLUTION) {
+		ISSOLUTION = iSSOLUTION;
 	}
-	public String getIs_completion() {
-		return is_completion;
+	public String getISWRITER() {
+		return ISWRITER;
 	}
-	public void setIs_completion(String is_completion) {
-		this.is_completion = is_completion;
+	public void setISWRITER(String iSWRITER) {
+		ISWRITER = iSWRITER;
 	}
-	public String getIs_note() {
-		return is_note;
+	public Date getISDATE() {
+		return ISDATE;
 	}
-	public void setIs_note(String is_note) {
-		this.is_note = is_note;
+	public void setISDATE(Date iSDATE) {
+		ISDATE = iSDATE;
 	}
-	public String getIs_com_fail() {
-		return is_com_fail;
+	public Date getISCOMPLETIONDATE() {
+		return ISCOMPLETIONDATE;
 	}
-	public void setIs_com_fail(String is_com_fail) {
-		this.is_com_fail = is_com_fail;
+	public void setISCOMPLETIONDATE(Date iSCOMPLETIONDATE) {
+		ISCOMPLETIONDATE = iSCOMPLETIONDATE;
 	}
-	public int getIs_state() {
-		return is_state;
+	public String getISNOTE() {
+		return ISNOTE;
 	}
-	public void setIs_state(int is_state) {
-		this.is_state = is_state;
+	public void setISNOTE(String iSNOTE) {
+		ISNOTE = iSNOTE;
+	}
+	public String getISCOMFAIL() {
+		return ISCOMFAIL;
+	}
+	public void setISCOMFAIL(String iSCOMFAIL) {
+		ISCOMFAIL = iSCOMFAIL;
+	}
+	public int getISSTATE() {
+		return ISSTATE;
+	}
+	public void setISSTATE(int iSSTATE) {
+		ISSTATE = iSSTATE;
+	}
+	public String getIS_FILE() {
+		return IS_FILE;
+	}
+	public void setIS_FILE(String iS_FILE) {
+		IS_FILE = iS_FILE;
 	}
 	@Override
 	public String toString() {
-		return "Issue [is_no=" + is_no + ", project_no=" + project_no
-				+ ", is_content=" + is_content + ", is_problem=" + is_problem
-				+ ", is_solution=" + is_solution + ", is_date=" + is_date
-				+ ", is_completion=" + is_completion + ", is_note=" + is_note
-				+ ", is_com_fail=" + is_com_fail + ", is_state=" + is_state
+		return "Issue [ISNO=" + ISNO + ", IS_P_NO=" + IS_P_NO + ", ISTYPE="
+				+ ISTYPE + ", ISCONTENT=" + ISCONTENT + ", ISPROBLEM="
+				+ ISPROBLEM + ", ISSOLUTION=" + ISSOLUTION + ", ISWRITER="
+				+ ISWRITER + ", ISDATE=" + ISDATE + ", ISCOMPLETIONDATE="
+				+ ISCOMPLETIONDATE + ", ISNOTE=" + ISNOTE + ", ISCOMFAIL="
+				+ ISCOMFAIL + ", ISSTATE=" + ISSTATE + ", IS_FILE=" + IS_FILE
 				+ "]";
 	}
+
 
 
 }

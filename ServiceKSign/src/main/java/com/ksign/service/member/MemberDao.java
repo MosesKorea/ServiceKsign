@@ -4,7 +4,7 @@ import java.util.List;
 
 public interface MemberDao {
 	/**
-	 * 상ㅇ자 생성
+	 * 사용자 생성
 	 * @param member
 	 * @return
 	 * @throws Exception

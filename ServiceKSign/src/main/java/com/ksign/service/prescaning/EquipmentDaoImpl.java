@@ -15,13 +15,19 @@ public class EquipmentDaoImpl implements EquipmentDao{
 	}
 
 	@Override
-	public Equipment readEquipment(int e_no) throws Exception {
+	public Equipment readEquipment(int eNO) throws Exception {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public boolean deleteEquipment(int e_no) throws Exception {
+	public boolean deleteEquipment(int eNO) throws Exception {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean selectAllEquipment() throws Exception {
 		// TODO Auto-generated method stub
 		return false;
 	}

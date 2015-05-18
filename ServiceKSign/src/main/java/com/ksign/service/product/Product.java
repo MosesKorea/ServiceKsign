@@ -1,48 +1,55 @@
 package com.ksign.service.product;
 
 public class Product {
-	
+	/**
+	 * PRODUCTNO	제품넘버
+PRODUCTTYPE	제품 타입
+PRODUCTNAME	제품이름
+
+	 */
 	/**
 	 * 제품넘버	NUMBER
 	 */
-	private int p_no;
+	private int PRODUCTNO;
 	/**
 	 * 제품 타입	VARCHAR2
 	 */
-	private String p_type;
+	private String PRODUCTTYPE;
 	/**
 	 * 제품이름	VARCHAR2
 	 */
-	private String p_name;
-	public Product(int p_no, String p_type, String p_name) {
+	private String PRODUCTNAME;
+	public Product(int pRODUCTNO, String pRODUCTTYPE, String pRODUCTNAME) {
 		super();
-		this.p_no = p_no;
-		this.p_type = p_type;
-		this.p_name = p_name;
+		PRODUCTNO = pRODUCTNO;
+		PRODUCTTYPE = pRODUCTTYPE;
+		PRODUCTNAME = pRODUCTNAME;
 	}
-	public int getP_no() {
-		return p_no;
+	public int getPRODUCTNO() {
+		return PRODUCTNO;
 	}
-	public void setP_no(int p_no) {
-		this.p_no = p_no;
+	public void setPRODUCTNO(int pRODUCTNO) {
+		PRODUCTNO = pRODUCTNO;
 	}
-	public String getP_type() {
-		return p_type;
+	public String getPRODUCTTYPE() {
+		return PRODUCTTYPE;
 	}
-	public void setP_type(String p_type) {
-		this.p_type = p_type;
+	public void setPRODUCTTYPE(String pRODUCTTYPE) {
+		PRODUCTTYPE = pRODUCTTYPE;
 	}
-	public String getP_name() {
-		return p_name;
+	public String getPRODUCTNAME() {
+		return PRODUCTNAME;
 	}
-	public void setP_name(String p_name) {
-		this.p_name = p_name;
+	public void setPRODUCTNAME(String pRODUCTNAME) {
+		PRODUCTNAME = pRODUCTNAME;
 	}
 	@Override
 	public String toString() {
-		return "Product [p_no=" + p_no + ", p_type=" + p_type + ", p_name="
-				+ p_name + "]";
+		return "Product [PRODUCTNO=" + PRODUCTNO + ", PRODUCTTYPE="
+				+ PRODUCTTYPE + ", PRODUCTNAME=" + PRODUCTNAME + "]";
 	}
+	
+	
 
 	
 

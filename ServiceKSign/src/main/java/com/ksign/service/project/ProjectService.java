@@ -36,5 +36,5 @@ public interface ProjectService {
 	 * @return
 	 * @throws Exception
 	 */
-	public abstract List<Project> selectProject() throws Exception;
+	public abstract List<Project> selectAllProject() throws Exception;
 }

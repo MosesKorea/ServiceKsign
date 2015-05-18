@@ -38,9 +38,9 @@ public class ProjectServiceImpl implements ProjectService{
 	}
 
 	@Override
-	public List<Project> selectProject() throws Exception {
+	public List<Project> selectAllProject() throws Exception {
 		// TODO Auto-generated method stub
-		return projectDao.selectProject();
+		return projectDao.selectAllProject();
 	}
 
 }
