@@ -27,5 +27,6 @@
 	</classpathentry>
 	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/SDB_API_1.5_RN01080002.jar"/>
 	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/SDBFramework_1.0.0.1.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/SDBAPI_JAVA_v1.5.2.24.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

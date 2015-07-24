@@ -15,7 +15,7 @@ public class Member {
 			 * UPW VARCHAR2(10) , 
 			 * UNAME VARCHAR2(20) , 
 			 * UCOMPANY VARCHAR2(20) , 
-			 * UTYPE NUMBER(2) , 
+			 * UTYPE VARCHAR2(10) , 
 			 * UDEPT NUMBER(10) , 
 			 * UMAIL VARCHAR2(20) , 
 			 * UPNUMBER NUMBER(14) , 
@@ -28,136 +28,246 @@ public class Member {
 	/**
 	 * 직원 넘버
 	 */
-	private int UNO; 
+	private int uno; 
+	
 	/**
 	 * 아이디
 	 */
-	private String UID; 
+	private String uid; 
 	/**
 	 * 패스워드
 	 */
-	private String UPW; 
+	private String upw; 
 	/**
 	 * 이름
 	 */
-	private String UNAME; 
+	private String uname; 
 	/**
 	 * 회사
 	 */
-	private String UCOMPANY; 
+	private String ucompany; 
 	/**
 	 * 유저타입
 	 */
-	private int UTYPE; 
+	private String utype; 
 	/**
 	 * 부서
 	 */
-	private int UDEPT; 
+	private int udept; 
 	/**
 	 * 메일
 	 */
-	private String UMAIL; 
+	private String umail; 
 	/**
 	 * 핸드폰넘버
 	 */
-	private int UPNUMBER; 
+	private int upnumber; 
 	/**
 	 * 사무실 넘버
 	 */
-	private int UONUMBER; 
+	private int uonumber; 
 	/**
 	 * 가입일
 	 */
-	private Date UDATE;
-	public Member(int uNO, String uID, String uPW, String uNAME,
-			String uCOMPANY, int uTYPE, int uDEPT, String uMAIL, int uPNUMBER,
-			int uONUMBER, Date uDATE) {
+	private Date udate;
+	
+	public Member() {
 		super();
-		UNO = uNO;
-		UID = uID;
-		UPW = uPW;
-		UNAME = uNAME;
-		UCOMPANY = uCOMPANY;
-		UTYPE = uTYPE;
-		UDEPT = uDEPT;
-		UMAIL = uMAIL;
-		UPNUMBER = uPNUMBER;
-		UONUMBER = uONUMBER;
-		UDATE = uDATE;
 	}
-	public int getUNO() {
-		return UNO;
-	}
-	public void setUNO(int uNO) {
-		UNO = uNO;
-	}
-	public String getUID() {
-		return UID;
-	}
-	public void setUID(String uID) {
-		UID = uID;
-	}
-	public String getUPW() {
-		return UPW;
-	}
-	public void setUPW(String uPW) {
-		UPW = uPW;
-	}
-	public String getUNAME() {
-		return UNAME;
-	}
-	public void setUNAME(String uNAME) {
-		UNAME = uNAME;
-	}
-	public String getUCOMPANY() {
-		return UCOMPANY;
-	}
-	public void setUCOMPANY(String uCOMPANY) {
-		UCOMPANY = uCOMPANY;
-	}
-	public int getUTYPE() {
-		return UTYPE;
-	}
-	public void setUTYPE(int uTYPE) {
-		UTYPE = uTYPE;
-	}
-	public int getUDEPT() {
-		return UDEPT;
-	}
-	public void setUDEPT(int uDEPT) {
-		UDEPT = uDEPT;
-	}
-	public String getUMAIL() {
-		return UMAIL;
-	}
-	public void setUMAIL(String uMAIL) {
-		UMAIL = uMAIL;
-	}
-	public int getUPNUMBER() {
-		return UPNUMBER;
-	}
-	public void setUPNUMBER(int uPNUMBER) {
-		UPNUMBER = uPNUMBER;
-	}
-	public int getUONUMBER() {
-		return UONUMBER;
-	}
-	public void setUONUMBER(int uONUMBER) {
-		UONUMBER = uONUMBER;
-	}
-	public Date getUDATE() {
-		return UDATE;
-	}
-	public void setUDATE(Date uDATE) {
-		UDATE = uDATE;
-	}
+
+
 	@Override
 	public String toString() {
-		return "Member [UNO=" + UNO + ", UID=" + UID + ", UPW=" + UPW
-				+ ", UNAME=" + UNAME + ", UCOMPANY=" + UCOMPANY + ", UTYPE="
-				+ UTYPE + ", UDEPT=" + UDEPT + ", UMAIL=" + UMAIL
-				+ ", UPNUMBER=" + UPNUMBER + ", UONUMBER=" + UONUMBER
-				+ ", UDATE=" + UDATE + "]";
+		return "Member [uno=" + uno + ", uid=" + uid + ", upw=" + upw
+				+ ", uname=" + uname + ", ucompany=" + ucompany + ", utype="
+				+ utype + ", udept=" + udept + ", umail=" + umail
+				+ ", upnumber=" + upnumber + ", uonumber=" + uonumber
+				+ ", udate=" + udate + "]";
+	}
+
+
+
+
+	public int getUno() {
+		return uno;
+	}
+
+
+
+
+	public void setUno(int uno) {
+		this.uno = uno;
+	}
+
+
+
+
+	public String getUid() {
+		return uid;
+	}
+
+
+
+
+	public void setUid(String uid) {
+		this.uid = uid;
+	}
+
+
+
+
+	public String getUpw() {
+		return upw;
+	}
+
+
+
+
+	public void setUpw(String upw) {
+		this.upw = upw;
+	}
+
+
+
+
+	public String getUname() {
+		return uname;
+	}
+
+
+
+
+	public void setUname(String uname) {
+		this.uname = uname;
+	}
+
+
+
+
+	public String getUcompany() {
+		return ucompany;
+	}
+
+
+
+
+	public void setUcompany(String ucompany) {
+		this.ucompany = ucompany;
+	}
+
+
+
+
+	public String getUtype() {
+		return utype;
+	}
+
+
+
+
+	public void setUtype(String utype) {
+		this.utype = utype;
+	}
+
+
+
+
+	public int getUdept() {
+		return udept;
+	}
+
+
+
+
+	public void setUdept(int udept) {
+		this.udept = udept;
+	}
+
+
+
+
+	public String getUmail() {
+		return umail;
+	}
+
+
+
+
+	public void setUmail(String umail) {
+		this.umail = umail;
+	}
+
+
+
+
+	public int getUpnumber() {
+		return upnumber;
+	}
+
+
+
+
+	public void setUpnumber(int upnumber) {
+		this.upnumber = upnumber;
+	}
+
+
+
+
+	public int getUonumber() {
+		return uonumber;
+	}
+
+
+
+
+	public void setUonumber(int uonumber) {
+		this.uonumber = uonumber;
+	}
+
+
+
+
+	public Date getUdate() {
+		return udate;
+	}
+
+
+
+
+	public void setUdate(Date udate) {
+		this.udate = udate;
+	}
+
+
+
+
+	public Member(int uno, String uid, String upw, String uname,
+			String ucompany, String utype, int udept, String umail, int upnumber,
+			int uonumber, Date udate) {
+		super();
+		this.uno = uno;
+		this.uid = uid;
+		this.upw = upw;
+		this.uname = uname;
+		this.ucompany = ucompany;
+		this.utype = utype;
+		this.udept = udept;
+		this.umail = umail;
+		this.upnumber = upnumber;
+		this.uonumber = uonumber;
+		this.udate = udate;
+	}
+
+
+
+
+	public boolean isMatchPassword(String upw){
+		boolean isMatch=false;
+		if(this.upw.equals(upw)){
+			isMatch=true;
+		}
+		return isMatch;
 	}
 	
 	

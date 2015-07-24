@@ -3,4 +3,123 @@
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.ksign.service.member.MemberMapper">
 
+	<insert id="create"  parameterType="Member" >
+		insert into user 
+		(UNO,UID,UPW,UNAME,UCOMPANY,UTYPE,UDEPT,UMAIL,UPNUMBER,UONUMBER,UDATE) 
+		VALUES(USER_SEQUENCE.NEXTVAL,#{uid},#{upw},#{uname},#{ucompany},#{utype},#{udept},#{imail},#{upnumber},#{uonumber},SYSDATE);
+	</insert>
+	
+	<select id="findMemberByNo"  
+			parameterType="java.lang.Integer"
+			resultType="Member">
+		select UNO,UID,UPW,UNAME,UCOMPANY,UTYPE,UDEPT,UMAIL,UPNUMBER,UONUMBER,UDATE 
+		from USER
+		where UNO=#{uno}
+	</select>
+	
+	<select id="findMemberById"  
+			parameterType="java.lang.String"
+			resultType="Member">
+		select UNO,UID,UPW,UNAME,UCOMPANY,UTYPE,UDEPT,UMAIL,UPNUMBER,UONUMBER,UDATE 
+		from USER
+		where UID=#{uid}
+	</select>
+	
+	<select id="findMemberList" resultType="Member">
+		select UNO,UID,UPW,UNAME,UCOMPANY,UTYPE,UDEPT,UMAIL,UPNUMBER,UONUMBER,UDATE  
+		from USER
+	</select>
+	
+	<delete id="deleteMember" parameterType="java.lang.Integer">
+		delete from USER
+		where
+		UNO=#{uno}
+	</delete>
+	
+	
+	<update id="updateMember"  parameterType="Member">
+		update USER set 
+		 	UPW  = #{upw}, 
+		 	UCOMPANY  = #{ucompany}, 
+		 	UTYPE  = #{utype}, 
+		 	UDEPT  = #{udept}, 
+		 	UMAIL  = #{umail}, 
+		 	UPNUMBER  = #{upnumber}, 
+		 	UONUMBER  = #{uonumber}
+		 where
+		    UNO = #{UNO}               		
+	</update>
+
+<!-- ADMIN 계정 에서 사용 -->
+	
+	<select id="existedMember" 
+		parameterType="java.lang.String"  
+		resultType="java.lang.Integer">
+		select count(*) as count 
+		from user 
+		where UID=#{uid}
+	</select>
+	
+	<select id="getCount" resultType="Integer">
+        SELECT count(*)
+        FROM members
+    </select>
+    
+    <select id="findMemberCount" parameterType="java.util.HashMap" resultType="Integer">
+		SELECT count(*)
+        FROM USER 
+        WHERE
+        <if test="findType == 'name'">
+                    UNAME like '%' || #{text} || '%'
+        </if>
+        <if test="findType == 'id'">
+                    UID like '%' || #{text} || '%'
+        </if>
+        <if test="findType == 'no'">
+                    UNO = #{text}
+        </if>
+                ORDER BY UNO desc
+        
+	</select>
+	
+	<select id="findMemberListBy" parameterType="java.util.HashMap" resultType="Member">
+		SELECT *
+	     FROM
+	     (
+	        SELECT rownum idx, s.* 
+	        FROM
+	        (
+	            SELECT UNO,UID,UPW,UNAME,UCOMPANY,UTYPE,UDEPT,UMAIL,UPNUMBER,UONUMBER,UDATE      
+	            FROM USER 
+	            WHERE 
+	            <if test="findType == 'name'">
+	    			UNAME like '%' || #{text} || '%'
+	  			</if>
+          		<if test="findType == 'id'">
+	    			UID like '%' || #{text} || '%'
+	  			</if>
+	  	  		<if test="findType == 'no'">
+	    			UNO = #{text}
+	  			</if>
+	  			ORDER BY UNO desc
+	        ) s
+	     )
+	     WHERE <![CDATA[ idx >= #{startRowNum} AND idx <= #{endRowNum} ]]>
+	</select>
+	
+	<select id="findAllMemberList" resultType="Member">
+		SELECT *
+     	FROM
+    	(
+        	SELECT rownum idx, s.* 
+        	FROM
+        (
+            SELECT UNO,UID,UPW,UNAME,UCOMPANY,UTYPE,UDEPT,UMAIL,UPNUMBER,UONUMBER,UDATE 
+            FROM USER
+            ORDER BY UNO desc
+        ) s
+     )
+     WHERE <![CDATA[ idx >= #{startRowNum} AND idx <= #{endRowNum} ]]>
+	</select>
+
 </mapper> 

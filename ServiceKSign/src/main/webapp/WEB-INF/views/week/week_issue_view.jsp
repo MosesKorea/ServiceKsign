@@ -84,7 +84,7 @@
 					<div class="panel panel-default">
 						<div class="panel-heading"><h2>이슈정보 입력</h2></div>
 						<!-- issue create start -->
-						<%@ include file="../issue/issue_view.jsp" %>
+						<%@ include file="../issue/issue_create.jsp" %>
 						<!-- issue create end -->
 						<div class="form-group" style="padding-bottom: 50pt">
 							<div class="col-md-2"></div>
